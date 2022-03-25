@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Valoracion gerontologica</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="icon" href="img/html.png">
+    <meta charset="utf-8">
+    <font face= "Time new roman">
+
+
+</head>
+
+
+<body>
+
+
+
+
+			<ul class="menu">
+
+
+	<li class="current"><a href="index.html">Programa Gerontológico Adulto Mayor</a></li>
+	<li><a href="Ficha.html">Ficha De Matricula</a></li>
+	<li><a href="Historia.html">Historia Gerontológica</a></li>
+	<li ><a href="Valoraciones.html">Valoraciones Biopsicosociales</a></li>
+    <li ><a href="instrumento.html">Instrumento</a></li>
+	<li><a href="visitas.html">Visitas Domiciliarias</a></li>
+			
+	
+   <div>
+        <img src="img/alcaldias.png" alt="Logo del encabezado" width="1"/>
+    </div>
+            </ul>
+
+
+
+ <!-- ANEXO D. Instrumento de Valoración Gerontológica.
+¿Qué medir? Lo eco biopsicosocial desde lo gerontológico Eco	= Servicios socio sanitarios
+Bio= Salud
+Psico = Estado de ánimo y satisfacción
+Soc= Relaciones interpersonales – participación social – familia-->  
+
+ <form action="" class="formulario" id= "formulario">
+
+<h1> VALORACIÓN GERONTOLÓGICA </h1>
+
+
+Fecha: <input type="text" name="fecha_digilenciamiento"><br>  	
+
+<h2>1. DATOS PERSONALES </h2> 
+
+<br>
+Nombres y Apellidos: <input type="text" name="nombres_apellidos"><br> 		
+Sexo:
+<select name="sexo" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">F</option>
+	<option value="no">M</option>
+	<option value="no">Prefiero no decirlo</option>
+</select>
+<br>
+Dirección: <input type="text" name="direccion_residencial"><br> 	
+
+Barrio:<input type="text" name="barrio"><br> 		 
+Teléfono: <input type="text" name="telefono"><br> 			 
+Documento de Identidad: <input type="text" name="numero_identificacion"><br> 			 
+Fecha de Nacimiento: Día <input type="text" name="fecha_nacimiento_dia"><br>  Mes <input type="text" name="fecha_nacimiento_mes"><br> Año <input type="text" name="fecha_nacimiento_ano"><br>   	
+ 
+Procedencia:
+<select name="procedencia" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Rural</option>
+	<option value="no">Urbana</option>
+
+</select> 
+<br>
+Lugar: <input type="text" name="lugar"><br>	
+Departamento: <input type="text" name="departamento"><br> 	
+Estado Civil: 
+<select name="estado_civil" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Casado(a)</option>
+	<option value="no">Soltero(a)</option>
+	<option value="no">Viudo(a)</option>
+	<option value="no">Separado(a)</option>
+	<option value="no">UL</option>
+</select> 
+ 	
+<br> 
+Educación: 
+<select name="educacion" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="Subsidiado">Ninguno</option>
+	<option value="Contributivo">Lee</option>
+	<option value="Subsidiado">Pria Incompleta</option>
+	<option value="Contributivo">Pria completa</option>
+	<option value="Subsidiado">S/daria Incompleta</option>
+	<option value="Contributivo">S/daria completa</option>
+	<option value="Subsidiado">Univ. Incom</option>
+	<option value="Contributivo">Univ. comp</option>
+	<option value="Subsidiado">Subsidiado</option>
+	<option value="Contributivo">Contributivo</option>
+</select>
+<br>
+Profesión: <input type="text" name="profesion"><br>	
+Otros: <input type="text" name="otros_oficios"><br>  				
+
+¿Se encuentra afiliado a algun servicio de salud?
+<select name="se_encuentra_afiliado_eps" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 
+<br>  	
+Sisben: 
+<input type="text" name="sisben"><br> ¿Cuál?:<input type="text" name="cual_sisben"><br>
+<br>
+  	
+EPS:<input type="text" name="eps"><br> ¿Cuál?:<input type="text" name="cual_eps"><br>		 
+Otro: <input type="text" name="otro_servicio"><br> 
+
+<h2>2. MEDIO AMBIENTE Y SERVICIOS SOCIOS SANITARIOS VIVIENDA </h2> 
+
+<br>
+
+Tenencia:
+ <select name="tenencia" style="width: 400px;">
+ 	<option value="si">--Seleccione--</option>
+	<option value="si">Propia</option>
+	<option value="no">Arrendada</option>
+</select>
+<br>
+Otro:<input type="text" name="otra_tenencia"><br>
+
+Tipo: 
+ <select name="tipo_vivienda" style="width: 400px;">
+ 	<option value="si">--Seleccione--</option>
+	<option value="si">Casa</option>
+	<option value="no">Apartamento</option>
+	<option value="no">Habitación</option>
+	<option value="si">Institución</option>
+	<option value="no">Inquilinato</option>
+</select> 
+<br>
+ 
+Otro: <input type="text" name="otro_tipo"><br>	
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>Califique la calidad ambiental del lugar donde usted vive</b></td><td width="100"><b>Seleccione </b></tr>
+
+<tr><td>Ruido</td> 
+<td><select name="ruido" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Iluminación</td> 
+<td><select name="iluminacion" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Ventilación</td> 
+<td><select name="ventilacion" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Humedad</td> 
+<td><select name="humedad" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Accesibilidad	de	las	escaleras (pasamanos, pirlan, inclinación)</td> 
+<td><select name="accesibilidad_escaleras" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Pisos (antideslizantes, tapetes)</td> 
+<td><select name="pisos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Vías de acceso</td> 
+<td><select name="vias_acceso" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+<tr><td>Transporte (facilidad)</td> 
+<td><select name="transporte" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Buena</option>
+	<option value="no">Aceptable</option>
+	<option value="si">Deficiente</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+
+
+</TABLE>	
+<br>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+           
+<h2>Su vivienda cuenta con servicios públicos completos:</h2>
+<br>
+<label><input type="radio" name="oidos" value="leve">Agua<br></label>
+<label><input type="radio" name="oidos1" value="moderado">Luz<br></label>
+<label><input type="radio" name="oidos2" value="leve">Teléfono<br></label>
+<label><input type="radio" name="oidos3" value="moderado">Gas<br></label>
+<label><input type="radio" name="oidos4" value="moderado">Alcantarillado<br></label>
+<button id="unselect" onclick="unselect()">Limpiar</button>
+        
+        <br>
+         <br>
+ <br>
+ <br>		
+
+
+¿De qué material esta hecha su vivienda?:<input type="text" name="material_vivienda"><br>
+
+<h2>3. ASPECTO BIOLÓGICO ESTADO DE SALUD </h2> 
+<br>
+
+¿Le ha sido diagnosticada por el médico alguno de las siguientes enfermedades?:
+<br>
+<br>
+<h2>PATOLOGÍA </h2> 
+<br>
+Hipertensión:
+<select name="hipertension" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si </option>
+	<option value="no">No</option>
+</select> 		
+Diabetes:
+<select name="diabetes" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+Enfermedades Cardiacas:
+<select name="enfermedades_cardiacas" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+Osteoporosis:
+<select name="osteoporosis" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+Asma:
+<select name="asma" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+Artritis:
+<select name="artritis" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+Cáncer:	
+<select name="cancer" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 	
+Demencia:
+<select name="demencia" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 		
+
+Otras: <input type="text" name="otras_patologias"><br> 	
+
+<TABLE BORDER="1"width="67%" height="45">
+
+<tr><td><b>¿En las últimas semanas ha tenido usted algunos de los siguientes dolores o
+síntomas?</b></td><td><b>-Seleccione-</b></td></tr>
+
+<tr><td>Dolor de Huesos, columna o articulaciones</td> 
+<td><select name="dolor_articulaciones" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Mareos o Vahídos</td> 
+<td><select name="mareos_vahidos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+
+<tr><td>Tos Catarro o Gripe</td> 
+<td><select name="tos_catarro_gripe" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Tobillos Inflamados</td> 
+<td><select name="tobillos_inflamados" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Cansancio sin razón aparente</td> 
+<td><select name="cansancio" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Dificultad para Dormir</td> 
+<td><select name="dificultad_para_dormir" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Flojedad en las piernas</td> 
+<td><select name="flojedad_piernas" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Dificultad para respirar o sensación de falta de aire</td> 
+<td><select name="dificultad_respirar" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Palpitaciones (taquicardia)</td> 
+<td><select name="palpitaciones" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Dolor u opresión en el pecho</td> 
+<td><select name="dolor_pecho" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Manos o pies fríos</td> 
+<td><select name="manos_pies_frios" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Adormilado durante el día</td> 
+<td><select name="adormilado" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Boca seca</td> 
+<td><select name="boca_seca" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+<tr><td>Hormigueo o adormecimiento (manos y pies)</td> 
+<td><select name="hormigueo_manos_pies" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Algunas veces</option>
+	<option value="si">Muchas veces</option>
+</select></td></tr>
+
+
+
+</TABLE>
+						
+<br>
+<h2>3.2. CONSUMO DE MEDICAMENTOS </h2> 
+<br>
+¿Consume algún (os) medicamentos prescritos por el médico?:
+<select name="consume_medicamentos" style="width: 300px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 
+<br>
+¿Cuántos?:<input type="text" name="cuantos_medicamentos"><br> 	
+¿Cuáles?:<input type="text" name="cuales_medicamentos"><br> 
+
+
+¿Recibe tratamiento especial actualmente?: 
+<select name="recibe_tratamiento" style="width: 300px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 
+<br>	
+¿Cuál?:<input type="text" name="cual_tratamiento"><br>  	
+
+¿Con qué frecuencia visita usted el médico?:
+<select name="frecuencia_visita_medico" style="width: 300px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Una vez al mes</option>
+	<option value="no">Semestralmente</option>
+	<option value="no">Anualmente</option>
+</select> 
+<br>
+Otros: <input type="text" name="otros_datos"><br> 	
+¿Consume medicamentos no prescritos por el médico? 
+<select name="medicamentos_no_prescritos"  style="width: 300px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>
+¿Cuáles?: <input type="text" name="cuales_no_prescritos"><br> 			
+
+<h2>3.3. HÁBITOS </h2>
+<br> 
+
+<h2>ESTILOS DE VIDA </h2>
+<br> 
+
+¿Ha cambiado sus hábitos alimenticios por causa de una enfermedad? 
+<select name="cambio_habitos_alimenticios" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>	
+¿Come menos de dos veces al día?: 
+<select name="come_menos_dos_veces" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 	
+<br>
+¿Tiene problemas dentales que le dificultan comer?
+<select name="tiene_problemas_dentales" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>
+¿Come pocas frutas, verduras y productos lácteos?:
+ <select name="come_pocas_frutas" style="width: 400px;">
+ 	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>
+¿Come solo?: 
+<select name="come_solo" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>	
+<br> 	
+¿Realiza actividad física?
+<select name="realiza_ejercicio" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>	
+<br>
+
+¿Con qué frecuencia?: <input type="text" name="frecuencia_realiza_ejercicio"><br>  	 
+
+Otros Hábitos: 
+¿Fuma?
+<select name="fuma" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>	
+¿Cuántos cigarrillos al día? <input type="text" name="cuantos_cigarrillos"><br> 	
+¿Consume licor?	
+<select name="consume_licor" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+¿Con qué frecuencia?: <input type="text" name="frecuencia_consume_licor"><br>   	
+¿En qué cantidad?: <input type="text" name="cantidad_consume_licor"><br> 
+
+<h2>3.4. FUNCIONALIDAD </h2> 
+<br>
+
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>¿Tiene dificultades para realizar las siguientes actividades?</b></td><td width="80"><b>Seleccione</b></tr>
+
+<tr><td>Cuidar de su aspecto físico (peinarse, ducharse, vestirse…..)</td> 
+<td><select name="cuidar_aspecto_fisico" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Ninguna</option>
+	<option value="no">Bastante</option>
+	<option value="si">Mucha</option>
+</select></td></tr>
+
+<tr><td>Realizar tareas caseras</td> 
+<td><select name="realizar_tareas_caseras" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Ninguna</option>
+	<option value="no">Bastante</option>
+	<option value="si">Mucha</option>
+</select></td></tr>
+
+
+<tr><td>Caminar</td> 
+<td><select name="caminar" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Ninguna</option>
+	<option value="no">Bastante</option>
+	<option value="si">Mucha</option>
+	
+</select></td></tr>
+
+
+<tr><td>Realizar tareas fuera de casa</td> 
+<td><select name="realizar_tareas_fuera" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Ninguna</option>
+	<option value="no">Bastante</option>
+	<option value="si">Mucha</option>
+	
+</select></td></tr>
+
+
+
+
+
+</TABLE>
+
+<br>
+¿Puede usted valerse por sí mismo?
+<select name="puede_valerse" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Bien</option>
+	<option value="no">Regular</option>
+	<option value="si">Mal</option>
+	<option value="no">Ns/Nr</option>
+</select>  
+<br> 
+
+<h2>3.5. LONGEVIDAD </h2> 
+<br><br>
+
+¿Ha tenido usted parientes longevos (años de vida)?
+<select name="parientes_longevos" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>  	 
+<br>
+Colocar las edades en la casilla correspondiente
+<br>
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>FAMILIAR</b></td><td><b>EDADES</b></td></tr>
+<tr><td>Padre/Madre</td><td><input id="text"style="width: 300px; height: 30px" size="32" name="edad_madre_padre"></td></td></tr>
+<tr><td>Abuelo/Abuela</td><td><input id="text"style="width: 300px; height: 30px" size="32" name="edad_abuelo_abuela"></td></td></tr>
+<tr><td>Tío(s)/Tía(s)</td><td><input id="text"style="width: 300px; height: 30px" size="32" name="edad_tio_tia"></td></tr>
+</TABLE>
+<br>
+
+
+<h2>4. ASPECTO PSICOLÓGICO </h2> 
+<br>
+
+<b><h2>ESTADO DE ÁNIMO Y SATISFACCIÓN </b></h2>
+<br>
+
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>ITEM</b></td><td width="100"><b>Seleccione</b></td></tr>
+
+<tr><td>¿Se siente deprimido o triste?</td> 
+<td><select name="siente_deprimido" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Se siente desesperado o angustiado?</td> 
+<td><select name="siente_desesperado" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Olvida el día de la semana que se encuentra?</td> 
+<td><select name="olvida_dia_que_se" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Olvida lo que está haciendo?</td> 
+<td><select name="olvida_oficios" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+<tr><td>¿Olvida sus objetos personales?</td> 
+<td><select name="olvida_objetos_personales" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Se desorienta o se pierde en algún lugar?</td> 
+<td><select name="se_pierde_en_algun_lugar" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Le	falta	interés	en	los	acontecimientos cotidianos?</td> 
+<td><select name="falta_interes" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+<tr><td>¿Le preocupa su higiene personal, vestido y apariencia?</td> 
+<td><select name="preocupa_higiene_personal" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Nunca</option>
+	<option value="no">Casi nunca</option>
+	<option value="si">A veces</option>
+	<option value="si">Frecuentemente</option>
+</select></td></tr>
+
+
+</TABLE>
+			
+<br>
+¿En general está usted satisfecho de la forma como ocupa su tiempo? 
+
+<select name="satisfecho_como_ocupa_eltiempo" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho</option>
+	<option value="no">Ns/Nr</option>
+</select>
+<br>
+¿En qué medida está usted satisfecho (a) con la vida?
+<select name="esta_satisfecho_con_la_vida" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Nada</option>
+	<option value="no">Algo</option>
+	<option value="si">Mucho</option>
+</select>	
+<br>
+<h2>Observaciones:</h2>
+<input id="text"style="width: 650px; height: 150px" size="32" name="observaciones"><br>	
+
+
+<h2>5. ASPECTO SOCIAL </h2> 
+
+<p>(FAMILIA, PARTICIPACIÓN SOCIAL, RELACIONES INTERPERSONALES) </p>
+<br>
+<h2>COMPOSICIÓN FAMILIAR</h2>
+<br>
+<h2><p><b>Relaciones familiares</b></p></h2>
+<br>
+Número de personas con las que vive: <input type="text" name="personas_viven">	
+¿Con quien vive usted?: <input type="text" name="nombre">  	
+¿Tuvo hijos? 
+<select name="tuvo_hijos" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>	
+¿Cuántos?: <input type="text" name="cuantos_hijos">
+
+<select name="genero" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Hombres</option>
+	<option value="no">Mujeres</option>
+</select>
+<br>	 	
+¿Cuál es el rol que usted tiene dentro de su núcleo familiar?: <input type="text" name="rol_nucleo_familiar">	
+¿De qué actividades participa usted  en familia?
+<select name="actividades_que_participa" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Domésticas</option>
+	<option value="no">Educativas</option>
+	<option value="si">Recreativas</option>
+	<option value="no">Religiosas</option>
+	<option value="no">Ninguna</option>
+	<option value="no">Todas</option>
+</select>
+<br>
+Otras: <input type="text" name="otras_actividades">
+¿Participa usted en las decisiones que se toman en su familia?
+<select name="participa_en_decisiones" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>  
+<br>  
+¿Cómo es su participación en las decisiones familiares? 
+<select name="como_participa" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Decide</option>
+	<option value="no">Sugiere</option>
+</select>
+<br>
+Mencione otra forma de participación: <input type="text" name="mencione_participacion">	
+¿Qué aportes recibe de sus familiares? 
+<select name="que_aportes_recibe" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Afecto</option>
+	<option value="no">Cuidado personal</option>
+	<option value="si">Asistencia económica</option>
+	<option value="no">Compañía</option>
+</select>
+<br>
+Otros:<input type="text" name="otros_aportes"> 	
+¿Está satisfecho (a) con el apoyo que recibe de su familia?
+<select name="esta_satisfecho" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>
+<br>
+¿Por qué?: <input type="text" name="por_que_satisfecho"> 	
+¿Cómo califica	usted	la	comunicación	con	las	personas	con	quienes	vive?
+<select name="comunicacion_con_quien_vive" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Buena</option>
+	<option value="no">Regular</option>
+	<option value="no">Mala</option>
+</select>
+<br>
+
+¿Por qué?:<input type="text" name="por_que_comunica">					 
+¿Cómo califica usted las relaciones con las personas con quienes vive? 
+<select name="como_califica_relaciones"  style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Excelentes</option>
+	<option value="no">Buenas</option>
+	<option value="no">Regulares</option>
+</select>
+<br>
+
+ ¿Por qué?: <input type="text" name="por_que_relaciona"><br>
+
+<h2><b>Relaciones interpersonales</b></h2>
+<br>
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>¿Con qué frecuencia suele usted verse para hablar o tomar algo con las siguientes personas?</b></td><td><b>Seleccione</b></td> </tr>
+
+<tr><td>Hijos (as) que no viven con usted en la misma casa</td> 
+<td><select name="hijos_que_no_viven_con_usted" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Todos o casi todos los días</option>
+	<option value="no">Al Menos 1 Vez Semanal</option>
+	<option value="si">Al Menos 1 Vez al Mes</option>
+	<option value="no">Menos de 1 vez al Mes</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Nietos (as) que no viven con usted en la misma casa</td> 
+<td><select name="nietos_que_no_viven_con_usted" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Todos o casi todos los días</option>
+	<option value="no">Al Menos 1 Vez Semanal</option>
+	<option value="si">Al Menos 1 Vez al Mes</option>
+	<option value="no">Menos de 1 vez al Mes</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Familiares que no viven con usted en la misma casa</td> 
+<td><select name="familiares_no_viven_con_usted" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Todos o casi todos los días</option>
+	<option value="no">Al Menos 1 Vez Semanal</option>
+	<option value="si">Al Menos 1 Vez al Mes</option>
+	<option value="no">Menos de 1 vez al Mes</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Vecinos</td> 
+<td><select name="vecinos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Todos o casi todos los días</option>
+	<option value="no">Al Menos 1 Vez Semanal</option>
+	<option value="si">Al Menos 1 Vez al Mes</option>
+	<option value="no">Menos de 1 vez al Mes</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Amigos que no sean Vecinos</td> 
+<td><select name="amigos_no_vecinos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Todos o casi todos los días</option>
+	<option value="no">Al Menos 1 Vez Semanal</option>
+	<option value="si">Al Menos 1 Vez al Mes</option>
+	<option value="no">Menos de 1 vez al Mes</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+
+
+</TABLE>
+
+<br>
+
+<TABLE BORDER="1"width="67%" height="45">
+<tr><td><b>En qué medida se siente usted satisfecho (a) de la relación que mantiene con las siguientes personas:</b></td><td width="100"><b>Seleccione</b></td></tr>
+
+<tr><td>Cónyuge</td> 
+<td><select name="conyuge" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Hijos</td> 
+<td><select name="hijos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+<tr><td>Nietos</td> 
+<td><select name="nietos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+<tr><td>Otros Familiares</td> 
+<td><select name="otros_familiares" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+<tr><td>Vecinos</td> 
+<td><select name="vecinos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+<tr><td>Amigos no vecinos</td> 
+<td><select name="amigos_no_vecinos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Satisfecho</option>
+	<option value="no">Indiferente</option>
+	<option value="si">Insatisfecho (a)</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+
+</TABLE>
+<br>
+
+
+<h2><b>Participación social</b></h2>
+<br>
+¿Participa usted en grupos, clubes u otros servicios sociales que le ofrece la comunidad?
+<select name="participa_en_grupos" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>  
+<br> 
+¿Cuál (es)?: <input type="text" name="cuales_grupos">	
+¿Con qué frecuencia asiste?
+<select name="con_que_frecuencia" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Casi Nunca</option>
+	<option value="si">Nunca</option>
+</select>
+<br>	 	
+Si su respuesta es nunca o casi nunca, explique las razones por las cuales no lo hace:
+<input id="text"style="width: 650px; height: 150px" size="32" name="nunca_explique_razones"><br>
+
+
+<h2>5.1. ACTIVIDAD Y OCIO </h2> 
+<br>
+
+¿En qué  ha  trabajado  o  se  ha  desempeñado  laboralmente  durante  su  vida?:
+<input type="text" name="trabajado_durante_su_vida">
+
+¿Desempeña alguna actividad laboral actualmente? 
+<select name="labora_actualmente" style="width: 400px;">
+	<option value="si">--Seleccione--</option>
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> 
+<br>
+¿Cuál?: <input type="text" name="cual_actividad"><br>
+
+
+<TABLE BORDER="1"width="70%" height="45">
+<tr><td><b>¿Con qué frecuencia realiza las siguientes actividades?</b></td><td width="100"><b>Seleccione</b></td></tr>
+
+<tr><td>Leer libro, periódico, revista</td> 
+<td><select name="leer" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Visitar amigos, parientes, otros</td> 
+<td><select name="visitar_amigos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Ver TV</td> 
+<td><select name="ver_television" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Escuchar radio</td> 
+<td><select name="escuchar_radio" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Caminar</td> 
+<td><select name="caminar" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+<tr><td>Juegos o actividades recreativas</td> 
+<td><select name="juegos_actividades" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Cuidar niños</td> 
+<td><select name="cuidar_ninos" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Hacer manualidades</td> 
+<td><select name="hacer_manualidades" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Hacer mandados o gestiones</td> 
+<td><select name="hacer_mandados" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+<tr><td>Ir de compras</td> 
+<td><select name="ir_compras" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+<tr><td>Viajar</td> 
+<td><select name="viajar" style="width: 80px";>
+	<option value="si">Seleccione</option>
+	<option value="si">Frecuentemente</option>
+	<option value="no">Ocasionalmente</option>
+	<option value="si">Nunca</option>
+	<option value="si">Ns/Nr</option>
+</select></td></tr>
+
+
+
+
+
+
+
+
+
+</TABLE>			
+					
+<br>
+<h2>Observaciones generales:</h2>
+<input id="text"style="width: 650px; height: 150px" size="32" name="observaciones_generales"><br>
+
+<h2>Impresión diagnóstica:</h2>
+<input id="text"style="width: 650px; height: 150px" size="32" name="impresion_diagnostica"><br>
+
+<h2>Concepto gerontológico:</h2>
+<input id="text"style="width: 650px; height: 150px" size="32" name="concepto_gerontologico"><br>
+
+<h2>Plan a seguir:</h2>
+<input id="text"style="width: 650px; height: 150px" size="32" name="plan"><br>
+
+
+
+
+<h2>ELABORADO POR</h2>
+<br>
+
+Nombre: <input type="text" name="nombre_funcionario"><br>
+
+Cargo: <input type="text" name="cargo"><br> 
+
+Registro profesional: <input type="text" name="registro_profesional"><br> 
+
+
+
+<input type="submit" name="Guardar">
+<input type="reset" name="Limpiar">
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 text-left">
+           
+        
+ 
+        
+    
+   <div style="text-align: center;">
+        <img src="img/alcaldias.png" alt="Logo del encabezado" width="500"/>
+    </div>
+
+</nav>
+</div>
+</div>
+</div>
+</footer>
+	
+</form>
+
+
+
+		</body>
+		</html>
+

@@ -3,9 +3,8 @@ CREATE TABLE ficha_progama (
     nombre_programa VARCHAR(50),
     vigencia DATE,
     fecha_digilenciamiento DATE,
-    numero_identificacion VARCHAR(15)
+    numero_identificacion VARCHAR(15),
 );
-
 CREATE TABLE ficha_datos_adulto_mayor (
     id_ficha_datos_usuario INT PRIMARY KEY,
     tipo_identificacion VARCHAR(5),
@@ -26,6 +25,7 @@ CREATE TABLE ficha_datos_ubicacion_contacto_adulto_mayor (
     barrio_vereda VARCHAR(50),
     telefono VARCHAR(15),
     celular VARCHAR(15),
+    nombre_familiar_acudiente VARCHAR (60),
     numero_identificacion VARCHAR(15),
 );
 
@@ -33,34 +33,32 @@ CREATE TABLE ficha_datos_familiar_acudiente_adulto_mayor (
     id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
     nombres_apellidos VARCHAR(80),
     parentesco VARCHAR(20),
-    dirección VARCHAR(60),
+    direccion_domicilio VARCHAR(60),
     telefono VARCHAR(15),
     barrio_vereda VARCHAR(50),
     celular VARCHAR(15),
     observaciones TEXT,
     numero_identificacion VARCHAR(15),
 );
-
 CREATE TABLE ficha_informacion_salud_adulto_mayor (
     id_ficha_informacion_salud_adulto_mayor INT PRIMARY KEY,
     regimen_afiliacion VARCHAR(20),
-    eps VARCHAR(40),
+    eps BIT,
     --si o no
-    afiliado VARCHAR(5),
+    sin_afiliacion VARCHAR(5),
     diagnostico_medico VARCHAR(60),
     entidad_certifica VARCHAR(40),
     observaciones_medicas TEXT,
     numero_identificacion VARCHAR(15),
 );
-
 CREATE TABLE ficha_compromiso_condiciones_especificas_adulto_mayor (
-    id_compromiso_condiciones_especificas_adulto_mayor INT PRIMARY KEY,
+    id_ficha_compromiso_condiciones_especificas_adulto_mayor INT PRIMARY KEY,
     compromisos_condiciones TEXT,
     nombre_adulto_mayor_acudiente VARCHAR(80),
     numero_identificacion VARCHAR(15),
 );
-
 CREATE TABLE ficha_funcionario (
+    id_ficha_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
@@ -277,13 +275,12 @@ CREATE TABLE instrumento_datos_adulto_mayor (
     educacion VARCHAR(25), 
     profesion VARCHAR(20), 
     otros_oficios VARCHAR(20), 
-se_encuentra_afiliado_eps VARCHAR(5), 
-sisben VARCHAR(5), 
-cual_sisben VARCHAR(10), 
-eps VARCHAR(5), 
-cual_eps VARCHAR(40), 
-otro_servicio VARCHAR(10),
-
+    se_encuentra_afiliado_eps VARCHAR(5), 
+    sisben VARCHAR(5), 
+    cual_sisben VARCHAR(10), 
+    eps VARCHAR(5), 
+    cual_eps VARCHAR(40), 
+    otro_servicio VARCHAR(10),
 
 );
 
@@ -313,17 +310,17 @@ material_vivienda VARCHAR (40)
 CREATE TABLE instrumento_estado_salud_patologias (
     id_instrumento_estado_salud_patologias INT PRIMARY KEY,
     hipertension VARCHAR(5),
-diabetes VARCHAR(5),
-enfermedades_cardiacas VARCHAR(5),
-osteoporosis VARCHAR(5),
-asma VARCHAR(5), 
-artritis VARCHAR(5), 
-cancer VARCHAR(5), 
-demencia VARCHAR(5), 
-otras VARCHAR(20),
+    diabetes VARCHAR(5),
+    enfermedades_cardiacas VARCHAR(5),
+    osteoporosis VARCHAR(5),
+    asma VARCHAR(5), 
+    artritis VARCHAR(5), 
+    cancer VARCHAR(5), 
+    demencia VARCHAR(5), 
+    otras VARCHAR(20),
     numero_identificacion VARCHAR(15),
 
-    dolor_articulaciones VARCHAR(15)
+dolor_articulaciones VARCHAR(15)
 mareos_vahidos VARCHAR(15)	
 tos_catarro_gripe VARCHAR(15)
 tobillos_inflamados	 VARCHAR(15)
@@ -340,8 +337,9 @@ hormigueo_manos_pies VARCHAR(15)
 );
 
 CREATE TABLE instrumento_consumo_medicamentos (
-    id_instrumento_consumo_medicamentos INT PRIMARY KEY,
-    consume_medicamentos VARCHAR(5), 
+
+id_instrumento_consumo_medicamentos INT PRIMARY KEY,
+consume_medicamentos VARCHAR(5), 
 cuantos_medicamentos VARCHAR(10),
 cuales_medicamentos VARCHAR(60),
 recibe_tratamiento VARCHAR(5),
@@ -350,12 +348,13 @@ frecuencia_visita_medico VARCHAR(20),
 otros_datos VARCHAR(20), 
 medicamentos_no_prescritos VARCHAR(5),
 cuales_no_prescritos VARCHAR(60),
-    numero_identificacion VARCHAR(15),
+numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE instrumento_habitos_adulto_mayor (
-    id_instrumento_habitos_adulto_mayor INT PRIMARY KEY,
-    cambio_habitos_alimenticios VARCHAR(5), 
+
+id_instrumento_habitos_adulto_mayor INT PRIMARY KEY,
+cambio_habitos_alimenticios VARCHAR(5), 
 come_menos_dos_veces VARCHAR(5), 
 tiene_problemas_dentales VARCHAR(5), 
 come_pocas_frutas VARCHAR(5),
@@ -367,10 +366,12 @@ cuantos_cigarrillos VARCHAR(5),
 consume_licor VARCHAR(5),
 frecuencia_consume_licor VARCHAR(5),
 cantidad_consume_licor VARCHAR(5),
-    numero_identificacion VARCHAR(15),
+numero_identificacion VARCHAR(15),
+
 );
 
 CREATE TABLE instrumento_funcionalidad_adulto_mayor (
+
     id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
     cuidar_aspecto_fisico VARCHAR(10),
     realizar_tareas_caseras	VARCHAR(10),
@@ -479,7 +480,7 @@ observaciones_generales TEXT,
 impresion_diagnostica TEXT, 
 concepto_gerontologico TEXT, 
 plan TEXT,
-    numero_identificacion VARCHAR(15),
+numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE datos_funcionario (
@@ -492,15 +493,15 @@ CREATE TABLE datos_funcionario (
 CREATE TABLE visitas_programa (
     id_visitas_progama INT PRIMARY KEY,
     fecha_visita DATE,
-solicitante VARCHAR(60),
-datos_visita VARCHAR(60),
-    numero_identificacion VARCHAR(15)
+    solicitante VARCHAR(60),
+    datos_visita VARCHAR(60),
+    numero_identificacion VARCHAR(15),
 );
 
  CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
     id_ficha_progama INT PRIMARY KEY,
     nombre_completo VARCHAR(120),
-edad INT,
+    edad INT,
 
 nombres_atiende_visita VARCHAR(20),
 tipo_numero_documento VARCHAR(20),
@@ -528,7 +529,6 @@ observaciones_adicionales TEXT,
 concepto TEXT,
 
 
-
 nombre_encuestado VARCHAR(20),
 numero_identificacion VARCHAR(15),
 residencia_encuestado VARCHAR(30),
@@ -538,7 +538,7 @@ fecha_inicio_proceso DATE,
 profesional_encargado VARCHAR(60), 
 observaciones TEXT,
 
-    numero_identificacion VARCHAR(15)
+numero_identificacion VARCHAR(15),
 );
 
 
