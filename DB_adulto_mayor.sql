@@ -3,7 +3,7 @@ CREATE TABLE ficha_progama (
     nombre_programa VARCHAR(50),
     vigencia DATE,
     fecha_digilenciamiento DATE,
-    numero_identificacion VARCHAR(15)
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE ficha_datos_adulto_mayor (
@@ -26,6 +26,7 @@ CREATE TABLE ficha_datos_ubicacion_contacto_adulto_mayor (
     barrio_vereda VARCHAR(50),
     telefono VARCHAR(15),
     celular VARCHAR(15),
+    nombre_familiar_acudiente VARCHAR (60),
     numero_identificacion VARCHAR(15),
 );
 
@@ -33,7 +34,7 @@ CREATE TABLE ficha_datos_familiar_acudiente_adulto_mayor (
     id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
     nombres_apellidos VARCHAR(80),
     parentesco VARCHAR(20),
-    dirección VARCHAR(60),
+    direccion_domicilio VARCHAR(60),
     telefono VARCHAR(15),
     barrio_vereda VARCHAR(50),
     celular VARCHAR(15),
@@ -53,13 +54,14 @@ CREATE TABLE ficha_informacion_salud_adulto_mayor (
 );
 
 CREATE TABLE ficha_compromiso_condiciones_especificas_adulto_mayor (
-    id_compromiso_condiciones_especificas_adulto_mayor INT PRIMARY KEY,
+    id_ficha_compromiso_condiciones_especificas_adulto_mayor INT PRIMARY KEY,
     compromisos_condiciones TEXT,
     nombre_adulto_mayor_acudiente VARCHAR(80),
     numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE ficha_funcionario (
+    id_ficha_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
@@ -276,7 +278,15 @@ CREATE TABLE instrumento_datos_ambiente_servicios_vivienda (
     tipo_vivienda VARCHAR(15),
     otro_tipo VARCHAR(15),
     numero_identificacion VARCHAR(15),
-    ruido VARCHAR (10) ilum inacion VARCHAR (10) ventilacion VARCHAR (10) humedad VARCHAR (10) accesibilidad_escaleras VARCHAR (10) pisos VARCHAR (10) vias_acceso VARCHAR (10) transporte VARCHAR (10) VARCHAR (10) material_vivienda VARCHAR (40)
+    ruido VARCHAR (10),
+    ilum inacion VARCHAR (10),
+    ventilacion VARCHAR (10),
+    humedad VARCHAR (10),
+    accesibilidad_escaleras VARCHAR (10),
+    pisos VARCHAR (10),
+    vias_acceso VARCHAR (10),
+    transporte VARCHAR (10),
+    material_vivienda VARCHAR (40)
 );
 
 CREATE TABLE instrumento_estado_salud_patologias (
@@ -291,7 +301,20 @@ CREATE TABLE instrumento_estado_salud_patologias (
     demencia VARCHAR(5),
     otras VARCHAR(20),
     numero_identificacion VARCHAR(15),
-    dolor_articulaciones VARCHAR(15) mareos_vahidos VARCHAR(15) tos_catarro_gripe VARCHAR(15) tobillos_inflamados VARCHAR(15) cansancio VARCHAR(15) dificultad_para_dormir VARCHAR(15) flojedad_piernas VARCHAR(15) dificultad_respirar VARCHAR(15) palpitaciones VARCHAR(15) dolor_pecho VARCHAR(15) manos_pies_frios VARCHAR(15) adormilado VARCHAR(15) boca_seca VARCHAR(15) hormigueo_manos_pies VARCHAR(15)
+    dolor_articulaciones VARCHAR(15),
+    mareos_vahidos VARCHAR(15),
+    tos_catarro_gripe VARCHAR(15),
+    tobillos_inflamados VARCHAR(15),
+    cansancio VARCHAR(15),
+    dificultad_para_dormir VARCHAR(15),
+    flojedad_piernas VARCHAR(15),
+    dificultad_respirar VARCHAR(15),
+    palpitaciones VARCHAR(15),
+    dolor_pecho VARCHAR(15),
+    manos_pies_frios VARCHAR(15),
+    adormilado VARCHAR(15),
+    boca_seca VARCHAR(15),
+    hormigueo_manos_pies VARCHAR(15)
 );
 
 CREATE TABLE instrumento_consumo_medicamentos (
@@ -338,7 +361,10 @@ CREATE TABLE instrumento_funcionalidad_adulto_mayor (
 CREATE TABLE instrumento_longevidad_adulto_mayor (
     id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
     parientes_longevos VARCHAR(5),
-    edad_madre_padre INT edad_abuelo_abuela INT edad_tio_tia INT numero_identificacion VARCHAR(15),
+    edad_madre_padre INT,
+    edad_abuelo_abuela INT,
+    edad_tio_tia INT,
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE ficha_psicologia_adulto_mayor (
@@ -430,7 +456,7 @@ CREATE TABLE visitas_programa (
     fecha_visita DATE,
     solicitante VARCHAR(60),
     datos_visita VARCHAR(60),
-    numero_identificacion VARCHAR(15)
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
@@ -465,7 +491,7 @@ CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
     fecha_inicio_proceso DATE,
     profesional_encargado VARCHAR(60),
     observaciones TEXT,
-    numero_identificacion VARCHAR(15)
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE ficha_funcionario (
