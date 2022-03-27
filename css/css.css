@@ -1,0 +1,350 @@
+
+@charset "utf-8"
+
+ul { 
+	position: relative;
+    width:100%;
+	background: #0a4a73;
+	height: 100%;
+	list-style: none;
+	font-family: Time new roman;
+	margin: auto;
+
+}
+ 
+
+
+.menu {
+  width: 100%;
+	background: #0a4a73;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: Time new roman;
+
+}
+
+.menu li{
+float: left;
+	display: inline-block;
+
+font-family: Time new roman
+
+}
+
+.menu li a{
+
+ padding: 15px 10px;
+
+	display: inline-block;
+	color: #0a4a73 ;
+	color: #FFFF;
+	text-decoration: none;
+	font-family: Time new roman;
+
+	
+}
+
+.menu li ul{
+display:none;
+	list-style: none;;
+	min-width: 140px;
+	font-family: Time new roman;
+
+}
+
+.menu li a:hover {
+background: #f5eef8;
+	color:#fa5405;
+font-family: Time new roman;
+
+
+	
+}
+
+div{
+  width: 100px;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 0%;
+  border: 0px;
+  padding: 0px;
+ 
+}
+
+h1
+{
+text-align: center;
+
+}
+
+
+
+h3, h4{
+  font-size: 16px;
+}
+
+.parra{
+  font-size: 25px;
+}
+ label{
+ 	font-size: 12px;
+ 	display: block;
+ 	width: 100%;
+
+}
+
+ textarea{
+ 	resize: vertical;
+ 	max-height: 200px;
+ 	min-height: 100px;
+}
+
+ input, textarea{
+ 	margin-bottom: 20px;
+ 	width: 50%;
+ 	padding: 10px;
+ 	box-sizing: border-box;
+ 	border: 2px solid #000000;
+}
+
+ input:focus, textarea:focus{
+ 	border: 1px solid #35ff8c;
+ 	background-color: #E0E6F8;
+ }
+
+ input[type="submit"]{
+ 	margin-bottom: 0;
+ 	background-color:#0a4a73;
+ 	color:#000;
+ 	border: none;
+}
+
+ input[type="submit"]:hover{
+ 	background-color: #d8b8ff;
+ 	cursor: pointer;
+}
+
+footer{
+  text-align: center;
+  font-size: 30px;
+  background: pink;
+}
+
+.formulario{
+
+display: grid;
+grid-template-columns: 1fr;
+
+gap:3px;
+
+padding: 10px;
+
+font-family: Time new roman;
+}
+
+margin-right:auto;
+
+
+
+
+
+table, th, td {
+
+}
+
+	th, td {
+
+	padding: 1.0%;
+	
+}
+
+/*<!-- MENU-->*/
+ul { 
+	position: relative;
+width: 100%;
+	background: #0a4a73 ;
+	height: 100%;
+	list-style: none;
+	font-family: Time new roman;
+	margin: auto;
+}
+
+
+.valoracion{
+	width: 20%;
+	background: #0a4a73;
+	margin: 15px auto;
+	list-style: none;
+	padding: 0;
+	font-family: Time new roman;
+}
+}
+
+.valoracion li{
+float: left;
+	display: inline-block;
+
+font-family: Time new roman
+
+}
+
+.valoracion li a{
+
+ padding: 15px 10px;
+
+	display: inline-block;
+	color: #FFFF ;
+	text-decoration: none;
+	font-family: Time new roman;
+
+	
+}
+
+.valoracion li ul{
+display:none;
+	list-style: none;;
+	min-width: 140px;
+	font-family: Time new roman;
+
+}
+
+.valoracion li a:hover {
+background: #f5eef8;
+	color:#fa5405;
+font-family: Time new roman;
+	
+}
+
+div{
+  width: 100px;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 0%;
+  border: 0px;
+  padding: 0px;
+ 
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E0F7FA;
+}
+.formulario{
+  position: relative;
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  padding: 50px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.formulario h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.formulario h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #fa5405;
+}
+.formulario form{
+  margin-top: 30px;
+}
+.formulario form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #0e4bf1;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}
+
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
+
+footer {
+	background-color:#E0E0E0;
+	height: 100%;
+    color: white;
+    padding: 15px;
+}
+
+.main1 { 
+  display:flex;
+  margin:0 auto;
+}
+
+a img:hover {
+    color: #fff;
+    position: center;
+
+}
+
+
+

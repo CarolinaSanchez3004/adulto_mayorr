@@ -1,0 +1,108 @@
+
+
+*{
+
+	margin: 0;
+	padding: 0;
+
+
+}
+
+
+
+main{
+
+padding: 3.5 rem 0;
+
+}
+
+
+}
+
+.formulario{
+
+display: grid;
+font-family: Time new roman;
+}
+
+header{
+	width: 100%;
+	background: #0a4a73 ;
+	height: 200px;
+	margin: auto;
+}
+
+ul,ol{
+
+	list-style: none;
+	font-family: Time new roman;
+}
+
+.nav li a{
+	
+    padding: 15px 16px;
+	display: inline-block;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: Time new roman;
+}
+.nav{
+    
+    width: 100%;
+	background: #0a4a73;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: Time new roman;
+
+}
+
+.nav> li {
+	float: left;
+	display: inline-block;
+
+font-family: Time new roman;
+}
+
+.nav li ul{
+display:none;
+	
+	min-width: 140px;
+	font-family: Time new roman;
+
+}
+
+
+.nav li a:hover{
+	background: #f5eef8;
+	color:#fa5405;
+font-family: Time new roman;
+}
+
+
+
+/*<!-- MENU-->*/
+
+#menu li > a {
+
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	
+}
+
+#menu form > button {
+
+	font-size: 18px;
+	font-weight: bold;
+
+font-family: Time new roman;
+
+
+
+
+
+
+
+
+
