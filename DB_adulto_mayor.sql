@@ -1,21 +1,21 @@
-CREATE TABLE ficha_progama (
-    id_ficha_progama INT PRIMARY KEY,
-    nombre_programa VARCHAR(50),
-    vigencia DATE,
-    fecha_digilenciamiento DATE,
-    numero_identificacion VARCHAR(15),
-);
-
 CREATE TABLE ficha_datos_adulto_mayor (
-    id_ficha_datos_usuario INT PRIMARY KEY,
+    numero_identificacion VARCHAR(15) PRIMARY KEY,
     tipo_identificacion VARCHAR(5),
-    numero_identificacion VARCHAR(15),
     fecha_expedicion DATE,
     dpto_municipio_expedicion VARCHAR(100),
     nombres VARCHAR(60),
     primer_apellido VARCHAR(40),
     segundo_apellido VARCHAR(40),
-    edad INT,
+    edad INT
+);
+
+CREATE TABLE ficha_progama (
+    id_ficha_progama INT PRIMARY KEY  AUTO_INCREMENT,
+    nombre_programa VARCHAR(50), 
+    vigencia DATE,
+    fecha_digilenciamiento DATE,
+    numero_identificacion VARCHAR(15)
+    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
 );
 
 CREATE TABLE ficha_datos_ubicacion_contacto_adulto_mayor (
@@ -28,6 +28,7 @@ CREATE TABLE ficha_datos_ubicacion_contacto_adulto_mayor (
     celular VARCHAR(15),
     nombre_familiar_acudiente VARCHAR (60),
     numero_identificacion VARCHAR(15),
+    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
 );
 
 CREATE TABLE ficha_datos_familiar_acudiente_adulto_mayor (
@@ -40,6 +41,7 @@ CREATE TABLE ficha_datos_familiar_acudiente_adulto_mayor (
     celular VARCHAR(15),
     observaciones TEXT,
     numero_identificacion VARCHAR(15),
+    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
 );
 
 CREATE TABLE ficha_informacion_salud_adulto_mayor (
