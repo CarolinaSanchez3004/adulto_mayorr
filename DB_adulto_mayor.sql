@@ -1,3 +1,19 @@
+CREATE TABLE usuarios(
+    id_usuario INT PRIMARY KEY  AUTO_INCREMENT,
+    nombre VARCHAR(80),
+    cargo VARCHAR(30),
+    registro_profesional VARCHAR(20),
+    numero_identificacion VARCHAR(15),
+    correo VARCHAR(80)
+);
+
+CREATE TABLE ficha_progama (
+    id_ficha_progama INT PRIMARY KEY  AUTO_INCREMENT,
+    nombre_programa VARCHAR(50), 
+    vigencia DATE,
+    fecha_digilenciamiento DATE
+);
+
 CREATE TABLE ficha_datos_adulto_mayor (
     numero_identificacion VARCHAR(15) PRIMARY KEY,
     tipo_identificacion VARCHAR(5),
@@ -6,16 +22,9 @@ CREATE TABLE ficha_datos_adulto_mayor (
     nombres VARCHAR(60),
     primer_apellido VARCHAR(40),
     segundo_apellido VARCHAR(40),
-    edad INT
-);
-
-CREATE TABLE ficha_progama (
-    id_ficha_progama INT PRIMARY KEY  AUTO_INCREMENT,
-    nombre_programa VARCHAR(50), 
-    vigencia DATE,
-    fecha_digilenciamiento DATE,
-    numero_identificacion VARCHAR(15)
-    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
+    edad INT,
+    id_ficha_progama INT,
+    foreign key (id_ficha_progama) references ficha_progama(id_ficha_progama)
 );
 
 CREATE TABLE ficha_datos_ubicacion_contacto_adulto_mayor (
@@ -53,6 +62,7 @@ CREATE TABLE ficha_informacion_salud_adulto_mayor (
     entidad_certifica VARCHAR(40),
     observaciones_medicas TEXT,
     numero_identificacion VARCHAR(15),
+    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
 );
 
 CREATE TABLE ficha_compromiso_condiciones_especificas_adulto_mayor (
@@ -60,15 +70,25 @@ CREATE TABLE ficha_compromiso_condiciones_especificas_adulto_mayor (
     compromisos_condiciones TEXT,
     nombre_adulto_mayor_acudiente VARCHAR(80),
     numero_identificacion VARCHAR(15),
+    foreign key (numero_identificacion) references ficha_datos_adulto_mayor(numero_identificacion)
 );
 
 CREATE TABLE ficha_funcionario (
     id_ficha_funcionario INT PRIMARY KEY,
-    nombre_funcionario VARCHAR(80),
-    cargo VARCHAR(30),
-    registro_profesional VARCHAR(20),
-    numero_identificacion VARCHAR(15),
+    id_ficha_progama INT,
+    id_usuario INT,
+    foreign key (id_ficha_progama) references ficha_progama(id_ficha_progama),
+    foreign key (id_usuario) references usuarios(id_usuario)
 );
+
+
+
+
+
+
+
+
+
 
 CREATE TABLE historia_progama (
     id_historia_progama INT PRIMARY KEY,
