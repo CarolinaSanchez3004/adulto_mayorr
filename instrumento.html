@@ -54,10 +54,10 @@ Fecha: <input type="text" name="fecha_digilenciamiento"><br>
 Nombres y Apellidos: <input type="text" name="nombres_apellidos"><br> 		
 Sexo:
 <select name="sexo" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">F</option>
-	<option value="no">M</option>
-	<option value="no">Prefiero no decirlo</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="f">F</option>
+	<option value="m">M</option>
+	<option value="no_decirlo">Prefiero no decirlo</option>
 </select>
 <br>
 Dirección: <input type="text" name="direccion_residencial"><br> 	
@@ -69,9 +69,9 @@ Fecha de Nacimiento: Día <input type="text" name="fecha_nacimiento_dia"><br>  M
  
 Procedencia:
 <select name="procedencia" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Rural</option>
-	<option value="no">Urbana</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="rural">Rural</option>
+	<option value="urbana">Urbana</option>
 
 </select> 
 <br>
@@ -79,28 +79,27 @@ Lugar: <input type="text" name="lugar"><br>
 Departamento: <input type="text" name="departamento"><br> 	
 Estado Civil: 
 <select name="estado_civil" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Casado(a)</option>
-	<option value="no">Soltero(a)</option>
-	<option value="no">Viudo(a)</option>
-	<option value="no">Separado(a)</option>
-	<option value="no">UL</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="casado">Casado(a)</option>
+	<option value="soltero">Soltero(a)</option>
+	<option value="viudo">Viudo(a)</option>
+	<option value="separado">Separado(a)</option>
+	<option value="ul">UL</option>
 </select> 
  	
 <br> 
 Educación: 
 <select name="educacion" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="Subsidiado">Ninguno</option>
-	<option value="Contributivo">Lee</option>
-	<option value="Subsidiado">Pria Incompleta</option>
-	<option value="Contributivo">Pria completa</option>
-	<option value="Subsidiado">S/daria Incompleta</option>
-	<option value="Contributivo">S/daria completa</option>
-	<option value="Subsidiado">Univ. Incom</option>
-	<option value="Contributivo">Univ. comp</option>
-	<option value="Subsidiado">Subsidiado</option>
-	<option value="Contributivo">Contributivo</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="ninguno">Ninguno</option>
+	<option value="lee">Lee</option>
+	<option value="primaria_incompleta">Pria Incompleta</option>
+	<option value="primaria_completa">Pria completa</option>
+	<option value="secundaria_incompleta">S/daria Incompleta</option>
+	<option value="secundaria_completa">S/daria completa</option>
+	<option value="universidad_incompleta">Univ. Incom</option>
+	<option value="universidad_completa">Univ. comp</option>
+	
 </select>
 <br>
 Profesión: <input type="text" name="profesion"><br>	
@@ -108,7 +107,7 @@ Otros: <input type="text" name="otros_oficios"><br>
 
 ¿Se encuentra afiliado a algun servicio de salud?
 <select name="se_encuentra_afiliado_eps" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 
@@ -126,21 +125,21 @@ Otro: <input type="text" name="otro_servicio"><br>
 
 Tenencia:
  <select name="tenencia" style="width: 400px;">
- 	<option value="si">--Seleccione--</option>
-	<option value="si">Propia</option>
-	<option value="no">Arrendada</option>
+ 	<option value="seleccione">--Seleccione--</option>
+	<option value="propia">Propia</option>
+	<option value="arrendada">Arrendada</option>
 </select>
 <br>
 Otro:<input type="text" name="otra_tenencia"><br>
 
 Tipo: 
  <select name="tipo_vivienda" style="width: 400px;">
- 	<option value="si">--Seleccione--</option>
-	<option value="si">Casa</option>
-	<option value="no">Apartamento</option>
-	<option value="no">Habitación</option>
-	<option value="si">Institución</option>
-	<option value="no">Inquilinato</option>
+ 	<option value="seleccione">--Seleccione--</option>
+	<option value="casa">Casa</option>
+	<option value="apartamento">Apartamento</option>
+	<option value="habitacion">Habitación</option>
+	<option value="institucion">Institución</option>
+	<option value="inquilinato">Inquilinato</option>
 </select> 
 <br>
  
@@ -150,75 +149,75 @@ Otro: <input type="text" name="otro_tipo"><br>
 
 <tr><td>Ruido</td> 
 <td><select name="ruido" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Iluminación</td> 
 <td><select name="iluminacion" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Ventilación</td> 
 <td><select name="ventilacion" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Humedad</td> 
 <td><select name="humedad" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Accesibilidad	de	las	escaleras (pasamanos, pirlan, inclinación)</td> 
 <td><select name="accesibilidad_escaleras" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Pisos (antideslizantes, tapetes)</td> 
 <td><select name="pisos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Vías de acceso</td> 
 <td><select name="vias_acceso" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 
 <tr><td>Transporte (facilidad)</td> 
 <td><select name="transporte" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Buena</option>
-	<option value="no">Aceptable</option>
-	<option value="si">Deficiente</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="buena">Buena</option>
+	<option value="aceptable">Aceptable</option>
+	<option value="deficiente">Deficiente</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 
@@ -232,15 +231,37 @@ Otro: <input type="text" name="otro_tipo"><br>
            
 <h2>Su vivienda cuenta con servicios públicos completos:</h2>
 <br>
-<label><input type="radio" name="oidos" value="leve">Agua<br></label>
-<label><input type="radio" name="oidos1" value="moderado">Luz<br></label>
-<label><input type="radio" name="oidos2" value="leve">Teléfono<br></label>
-<label><input type="radio" name="oidos3" value="moderado">Gas<br></label>
-<label><input type="radio" name="oidos4" value="moderado">Alcantarillado<br></label>
-<button id="unselect" onclick="unselect()">Limpiar</button>
-        
-        <br>
-         <br>
+<label><select name="agua" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Agua<br> </label>
+<br>
+<label><select name="luz" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Luz<br> </label>
+<br>
+<label><select name="telefono" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Teléfono<br> </label>
+<br>
+<label><select name="gas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Gas<br> </label>
+<br>
+<label><select name="alcantarillado" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Alcantarillado<br> </label>
+
+       
  <br>
  <br>		
 
@@ -257,49 +278,49 @@ Otro: <input type="text" name="otro_tipo"><br>
 <br>
 Hipertensión:
 <select name="hipertension" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si </option>
 	<option value="no">No</option>
 </select> 		
 Diabetes:
 <select name="diabetes" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
 Enfermedades Cardiacas:
 <select name="enfermedades_cardiacas" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
 Osteoporosis:
 <select name="osteoporosis" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
 Asma:
 <select name="asma" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
 Artritis:
 <select name="artritis" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
 Cáncer:	
 <select name="cancer" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 	
 Demencia:
 <select name="demencia" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 		
@@ -313,115 +334,115 @@ síntomas?</b></td><td><b>-Seleccione-</b></td></tr>
 
 <tr><td>Dolor de Huesos, columna o articulaciones</td> 
 <td><select name="dolor_articulaciones" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Mareos o Vahídos</td> 
 <td><select name="mareos_vahidos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 
 <tr><td>Tos Catarro o Gripe</td> 
 <td><select name="tos_catarro_gripe" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Tobillos Inflamados</td> 
 <td><select name="tobillos_inflamados" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Cansancio sin razón aparente</td> 
 <td><select name="cansancio" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Dificultad para Dormir</td> 
 <td><select name="dificultad_para_dormir" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Flojedad en las piernas</td> 
 <td><select name="flojedad_piernas" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Dificultad para respirar o sensación de falta de aire</td> 
 <td><select name="dificultad_respirar" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Palpitaciones (taquicardia)</td> 
 <td><select name="palpitaciones" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Dolor u opresión en el pecho</td> 
 <td><select name="dolor_pecho" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Manos o pies fríos</td> 
 <td><select name="manos_pies_frios" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Adormilado durante el día</td> 
 <td><select name="adormilado" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Boca seca</td> 
 <td><select name="boca_seca" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 <tr><td>Hormigueo o adormecimiento (manos y pies)</td> 
 <td><select name="hormigueo_manos_pies" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Algunas veces</option>
-	<option value="si">Muchas veces</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="algunas_veces">Algunas veces</option>
+	<option value="muchas_veces">Muchas veces</option>
 </select></td></tr>
 
 
@@ -433,7 +454,7 @@ síntomas?</b></td><td><b>-Seleccione-</b></td></tr>
 <br>
 ¿Consume algún (os) medicamentos prescritos por el médico?:
 <select name="consume_medicamentos" style="width: 300px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 
@@ -444,7 +465,7 @@ síntomas?</b></td><td><b>-Seleccione-</b></td></tr>
 
 ¿Recibe tratamiento especial actualmente?: 
 <select name="recibe_tratamiento" style="width: 300px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 
@@ -453,16 +474,16 @@ síntomas?</b></td><td><b>-Seleccione-</b></td></tr>
 
 ¿Con qué frecuencia visita usted el médico?:
 <select name="frecuencia_visita_medico" style="width: 300px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Una vez al mes</option>
-	<option value="no">Semestralmente</option>
-	<option value="no">Anualmente</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="una_vez">Una vez al mes</option>
+	<option value="semestralmente">Semestralmente</option>
+	<option value="anualmente">Anualmente</option>
 </select> 
 <br>
 Otros: <input type="text" name="otros_datos"><br> 	
 ¿Consume medicamentos no prescritos por el médico? 
 <select name="medicamentos_no_prescritos"  style="width: 300px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -477,42 +498,42 @@ Otros: <input type="text" name="otros_datos"><br>
 
 ¿Ha cambiado sus hábitos alimenticios por causa de una enfermedad? 
 <select name="cambio_habitos_alimenticios" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
 <br>	
 ¿Come menos de dos veces al día?: 
 <select name="come_menos_dos_veces" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 	
 <br>
 ¿Tiene problemas dentales que le dificultan comer?
 <select name="tiene_problemas_dentales" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
 <br>
 ¿Come pocas frutas, verduras y productos lácteos?:
  <select name="come_pocas_frutas" style="width: 400px;">
- 	<option value="si">--Seleccione--</option>
+ 	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
 <br>
 ¿Come solo?: 
 <select name="come_solo" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>	
 <br> 	
 ¿Realiza actividad física?
 <select name="realiza_ejercicio" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>	
@@ -523,7 +544,7 @@ Otros: <input type="text" name="otros_datos"><br>
 Otros Hábitos: 
 ¿Fuma?
 <select name="fuma" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -531,7 +552,7 @@ Otros Hábitos:
 ¿Cuántos cigarrillos al día? <input type="text" name="cuantos_cigarrillos"><br> 	
 ¿Consume licor?	
 <select name="consume_licor" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -546,37 +567,37 @@ Otros Hábitos:
 
 <tr><td>Cuidar de su aspecto físico (peinarse, ducharse, vestirse…..)</td> 
 <td><select name="cuidar_aspecto_fisico" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Ninguna</option>
-	<option value="no">Bastante</option>
-	<option value="si">Mucha</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="ninguna">Ninguna</option>
+	<option value="bastante">Bastante</option>
+	<option value="mucha">Mucha</option>
 </select></td></tr>
 
 <tr><td>Realizar tareas caseras</td> 
 <td><select name="realizar_tareas_caseras" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Ninguna</option>
-	<option value="no">Bastante</option>
-	<option value="si">Mucha</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="ninguna">Ninguna</option>
+	<option value="bastante">Bastante</option>
+	<option value="mucha">Mucha</option>
 </select></td></tr>
 
 
 <tr><td>Caminar</td> 
 <td><select name="caminar" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Ninguna</option>
-	<option value="no">Bastante</option>
-	<option value="si">Mucha</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="ninguna">Ninguna</option>
+	<option value="bastante">Bastante</option>
+	<option value="mucha">Mucha</option>
 	
 </select></td></tr>
 
 
 <tr><td>Realizar tareas fuera de casa</td> 
 <td><select name="realizar_tareas_fuera" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Ninguna</option>
-	<option value="no">Bastante</option>
-	<option value="si">Mucha</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="ninguna">Ninguna</option>
+	<option value="bastante">Bastante</option>
+	<option value="mucha">Mucha</option>
 	
 </select></td></tr>
 
@@ -589,11 +610,11 @@ Otros Hábitos:
 <br>
 ¿Puede usted valerse por sí mismo?
 <select name="puede_valerse" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Bien</option>
-	<option value="no">Regular</option>
-	<option value="si">Mal</option>
-	<option value="no">Ns/Nr</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="bien">Bien</option>
+	<option value="regular">Regular</option>
+	<option value="mal">Mal</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select>  
 <br> 
 
@@ -602,7 +623,7 @@ Otros Hábitos:
 
 ¿Ha tenido usted parientes longevos (años de vida)?
 <select name="parientes_longevos" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>  	 
@@ -629,73 +650,73 @@ Colocar las edades en la casilla correspondiente
 
 <tr><td>¿Se siente deprimido o triste?</td> 
 <td><select name="siente_deprimido" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Se siente desesperado o angustiado?</td> 
 <td><select name="siente_desesperado" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Olvida el día de la semana que se encuentra?</td> 
 <td><select name="olvida_dia_que_se" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Olvida lo que está haciendo?</td> 
 <td><select name="olvida_oficios" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 <tr><td>¿Olvida sus objetos personales?</td> 
 <td><select name="olvida_objetos_personales" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Se desorienta o se pierde en algún lugar?</td> 
 <td><select name="se_pierde_en_algun_lugar" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Le	falta	interés	en	los	acontecimientos cotidianos?</td> 
 <td><select name="falta_interes" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 <tr><td>¿Le preocupa su higiene personal, vestido y apariencia?</td> 
 <td><select name="preocupa_higiene_personal" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Nunca</option>
-	<option value="no">Casi nunca</option>
-	<option value="si">A veces</option>
-	<option value="si">Frecuentemente</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="nunca">Nunca</option>
+	<option value="casi_nunca">Casi nunca</option>
+	<option value="a_veces">A veces</option>
+	<option value="frecuentemente">Frecuentemente</option>
 </select></td></tr>
 
 
@@ -705,19 +726,19 @@ Colocar las edades en la casilla correspondiente
 ¿En general está usted satisfecho de la forma como ocupa su tiempo? 
 
 <select name="satisfecho_como_ocupa_eltiempo" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho</option>
-	<option value="no">Ns/Nr</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select>
 <br>
 ¿En qué medida está usted satisfecho (a) con la vida?
 <select name="esta_satisfecho_con_la_vida" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Nada</option>
-	<option value="no">Algo</option>
-	<option value="si">Mucho</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="nada">Nada</option>
+	<option value="algo">Algo</option>
+	<option value="mucho">Mucho</option>
 </select>	
 <br>
 <h2>Observaciones:</h2>
@@ -736,7 +757,7 @@ Número de personas con las que vive: <input type="text" name="personas_viven">
 ¿Con quien vive usted?: <input type="text" name="nombre">  	
 ¿Tuvo hijos? 
 <select name="tuvo_hijos" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -744,52 +765,52 @@ Número de personas con las que vive: <input type="text" name="personas_viven">
 ¿Cuántos?: <input type="text" name="cuantos_hijos">
 
 <select name="genero" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Hombres</option>
-	<option value="no">Mujeres</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="hombres">Hombres</option>
+	<option value="mujeres">Mujeres</option>
 </select>
 <br>	 	
 ¿Cuál es el rol que usted tiene dentro de su núcleo familiar?: <input type="text" name="rol_nucleo_familiar">	
 ¿De qué actividades participa usted  en familia?
 <select name="actividades_que_participa" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Domésticas</option>
-	<option value="no">Educativas</option>
-	<option value="si">Recreativas</option>
-	<option value="no">Religiosas</option>
-	<option value="no">Ninguna</option>
-	<option value="no">Todas</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="domesticas">Domésticas</option>
+	<option value="educativas">Educativas</option>
+	<option value="recreativas">Recreativas</option>
+	<option value="religiosas">Religiosas</option>
+	<option value="ninguna">Ninguna</option>
+	<option value="todas">Todas</option>
 </select>
 <br>
 Otras: <input type="text" name="otras_actividades">
 ¿Participa usted en las decisiones que se toman en su familia?
 <select name="participa_en_decisiones" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>  
 <br>  
 ¿Cómo es su participación en las decisiones familiares? 
 <select name="como_participa" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Decide</option>
-	<option value="no">Sugiere</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="decide">Decide</option>
+	<option value="sugiere">Sugiere</option>
 </select>
 <br>
 Mencione otra forma de participación: <input type="text" name="mencione_participacion">	
 ¿Qué aportes recibe de sus familiares? 
 <select name="que_aportes_recibe" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Afecto</option>
-	<option value="no">Cuidado personal</option>
-	<option value="si">Asistencia económica</option>
-	<option value="no">Compañía</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="afecto">Afecto</option>
+	<option value="cuidado_personal">Cuidado personal</option>
+	<option value="asistencia_economica">Asistencia económica</option>
+	<option value="compañia">Compañía</option>
 </select>
 <br>
 Otros:<input type="text" name="otros_aportes"> 	
 ¿Está satisfecho (a) con el apoyo que recibe de su familia?
 <select name="esta_satisfecho" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -797,20 +818,20 @@ Otros:<input type="text" name="otros_aportes">
 ¿Por qué?: <input type="text" name="por_que_satisfecho"> 	
 ¿Cómo califica	usted	la	comunicación	con	las	personas	con	quienes	vive?
 <select name="comunicacion_con_quien_vive" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Buena</option>
-	<option value="no">Regular</option>
-	<option value="no">Mala</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="buena">Buena</option>
+	<option value="regular">Regular</option>
+	<option value="mala">Mala</option>
 </select>
 <br>
 
 ¿Por qué?:<input type="text" name="por_que_comunica">					 
 ¿Cómo califica usted las relaciones con las personas con quienes vive? 
 <select name="como_califica_relaciones"  style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Excelentes</option>
-	<option value="no">Buenas</option>
-	<option value="no">Regulares</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="excelentes">Excelentes</option>
+	<option value="buenas">Buenas</option>
+	<option value="regulares">Regulares</option>
 </select>
 <br>
 
@@ -823,52 +844,52 @@ Otros:<input type="text" name="otros_aportes">
 
 <tr><td>Hijos (as) que no viven con usted en la misma casa</td> 
 <td><select name="hijos_que_no_viven_con_usted" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Todos o casi todos los días</option>
-	<option value="no">Al Menos 1 Vez Semanal</option>
-	<option value="si">Al Menos 1 Vez al Mes</option>
-	<option value="no">Menos de 1 vez al Mes</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="todos_dias">Todos o casi todos los días</option>
+	<option value="una_vez_semana">Al Menos 1 Vez Semanal</option>
+	<option value="una_vez_mes">Al Menos 1 Vez al Mes</option>
+	<option value="menos_una_Vez">Menos de 1 vez al Mes</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Nietos (as) que no viven con usted en la misma casa</td> 
 <td><select name="nietos_que_no_viven_con_usted" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Todos o casi todos los días</option>
-	<option value="no">Al Menos 1 Vez Semanal</option>
-	<option value="si">Al Menos 1 Vez al Mes</option>
-	<option value="no">Menos de 1 vez al Mes</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="todos_dias">Todos o casi todos los días</option>
+	<option value="una_vez_semana">Al Menos 1 Vez Semanal</option>
+	<option value="una_vez_mes">Al Menos 1 Vez al Mes</option>
+	<option value="menos_una_Vez">Menos de 1 vez al Mes</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Familiares que no viven con usted en la misma casa</td> 
 <td><select name="familiares_no_viven_con_usted" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Todos o casi todos los días</option>
-	<option value="no">Al Menos 1 Vez Semanal</option>
-	<option value="si">Al Menos 1 Vez al Mes</option>
-	<option value="no">Menos de 1 vez al Mes</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="todos_dias">Todos o casi todos los días</option>
+	<option value="una_vez_semana">Al Menos 1 Vez Semanal</option>
+	<option value="una_vez_mes">Al Menos 1 Vez al Mes</option>
+	<option value="menos_una_Vez">Menos de 1 vez al Mes</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Vecinos</td> 
 <td><select name="vecinos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Todos o casi todos los días</option>
-	<option value="no">Al Menos 1 Vez Semanal</option>
-	<option value="si">Al Menos 1 Vez al Mes</option>
-	<option value="no">Menos de 1 vez al Mes</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="todos_dias">Todos o casi todos los días</option>
+	<option value="una_vez_semana">Al Menos 1 Vez Semanal</option>
+	<option value="una_vez_mes">Al Menos 1 Vez al Mes</option>
+	<option value="menos_una_Vez">Menos de 1 vez al Mes</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Amigos que no sean Vecinos</td> 
 <td><select name="amigos_no_vecinos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Todos o casi todos los días</option>
-	<option value="no">Al Menos 1 Vez Semanal</option>
-	<option value="si">Al Menos 1 Vez al Mes</option>
-	<option value="no">Menos de 1 vez al Mes</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="todos_dias">Todos o casi todos los días</option>
+	<option value="una_vez_semana">Al Menos 1 Vez Semanal</option>
+	<option value="una_vez_mes">Al Menos 1 Vez al Mes</option>
+	<option value="menos_una_Vez">Menos de 1 vez al Mes</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 
@@ -883,52 +904,52 @@ Otros:<input type="text" name="otros_aportes">
 
 <tr><td>Cónyuge</td> 
 <td><select name="conyuge" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Hijos</td> 
 <td><select name="hijos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 <tr><td>Nietos</td> 
 <td><select name="nietos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 <tr><td>Otros Familiares</td> 
 <td><select name="otros_familiares" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 <tr><td>Vecinos</td> 
 <td><select name="vecinos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 <tr><td>Amigos no vecinos</td> 
 <td><select name="amigos_no_vecinos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Satisfecho</option>
-	<option value="no">Indiferente</option>
-	<option value="si">Insatisfecho (a)</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="satisfecho">Satisfecho</option>
+	<option value="indiferente">Indiferente</option>
+	<option value="insatisfecho">Insatisfecho (a)</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 
@@ -941,7 +962,7 @@ Otros:<input type="text" name="otros_aportes">
 <br>
 ¿Participa usted en grupos, clubes u otros servicios sociales que le ofrece la comunidad?
 <select name="participa_en_grupos" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>  
@@ -949,10 +970,10 @@ Otros:<input type="text" name="otros_aportes">
 ¿Cuál (es)?: <input type="text" name="cuales_grupos">	
 ¿Con qué frecuencia asiste?
 <select name="con_que_frecuencia" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Casi Nunca</option>
-	<option value="si">Nunca</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="frecuentementer">Frecuentemente</option>
+	<option value="casi_nunca">Casi Nunca</option>
+	<option value="nunca">Nunca</option>
 </select>
 <br>	 	
 Si su respuesta es nunca o casi nunca, explique las razones por las cuales no lo hace:
@@ -967,7 +988,7 @@ Si su respuesta es nunca o casi nunca, explique las razones por las cuales no lo
 
 ¿Desempeña alguna actividad laboral actualmente? 
 <select name="labora_actualmente" style="width: 400px;">
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select> 
@@ -980,101 +1001,101 @@ Si su respuesta es nunca o casi nunca, explique las razones por las cuales no lo
 
 <tr><td>Leer libro, periódico, revista</td> 
 <td><select name="leer" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Visitar amigos, parientes, otros</td> 
 <td><select name="visitar_amigos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Ver TV</td> 
 <td><select name="ver_television" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Escuchar radio</td> 
 <td><select name="escuchar_radio" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Caminar</td> 
 <td><select name="caminar" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 <tr><td>Juegos o actividades recreativas</td> 
 <td><select name="juegos_actividades" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Cuidar niños</td> 
 <td><select name="cuidar_ninos" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Hacer manualidades</td> 
 <td><select name="hacer_manualidades" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Hacer mandados o gestiones</td> 
 <td><select name="hacer_mandados" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 <tr><td>Ir de compras</td> 
 <td><select name="ir_compras" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 
 <tr><td>Viajar</td> 
 <td><select name="viajar" style="width: 80px";>
-	<option value="si">Seleccione</option>
-	<option value="si">Frecuentemente</option>
-	<option value="no">Ocasionalmente</option>
-	<option value="si">Nunca</option>
-	<option value="si">Ns/Nr</option>
+	<option value="seleccione">Seleccione</option>
+	<option value="frecuentemente">Frecuentemente</option>
+	<option value="ocasionalmente">Ocasionalmente</option>
+	<option value="nunca">Nunca</option>
+	<option value="no_sabe">Ns/Nr</option>
 </select></td></tr>
 
 

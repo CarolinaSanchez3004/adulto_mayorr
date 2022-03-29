@@ -40,7 +40,7 @@
  	<h1>CENTRO VIDA GERONTOLÓGICO "BELLO ATARDECER" </h1>
  	<h1>MUNICIPIO DE SONSÓN </h1>
 
-Fecha de apertura: <input type="text" name="fecha"><br>
+Fecha de apertura: <input type="text" name="fecha_apertura"><br>
 
 <h2> DATOS DE IDENTIFICACIÓN </h2>
 
@@ -61,11 +61,11 @@ Edad:<input type="text" name="edad"><br>
 
 Sexo: <br>
 <select name="sexo" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Masculino</option>
-	<option value="no">Femenino</option>
-	<option value="no">LGTBI</option>
-	<option value="no">Prefiero no decirlo</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="masculino">Masculino</option>
+	<option value="femenino">Femenino</option>
+	<option value="lgtbi">LGTBI</option>
+	<option value="prefiero_no_decirlo">Prefiero no decirlo</option>
 </select>
 
 <br>
@@ -76,9 +76,9 @@ Grado de escolaridad:<input type="text" name="grado_escolaridad"><br>	Grupo del 
 EPS: <input type="text" name="eps"><br> 	
 Se encuentra en: 
 <select name="regimen_actual" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="Subsidiado">Subsidiado</option>
-	<option value="Contributivo">Contributivo</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="subsidiado">Subsidiado</option>
+	<option value="contributivo">Contributivo</option>
 </select>
 <br>
 
@@ -86,7 +86,7 @@ Fecha de ingreso al programa:<input type="text" name="fecha_ingreso"><br>
 
 Motivo de ingreso:
 <select name="motivo_ingreso" style="width: 400px"; >
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="voluntario">Voluntario</option>
 	<option value="soledad">Soledad</option>
 	<option value="abandono">Abandono familiar</option>
@@ -97,11 +97,10 @@ Motivo de ingreso:
 
 <br>
 
-Antecedentes importantes 
 
 ¿Consumo de alcohol?:
 <select name="consume_alcohol" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -110,7 +109,7 @@ Antecedentes importantes
 
 ¿Fumador?:
 <select name="fumador" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -141,31 +140,75 @@ Parentesco: <input type="text" name="parentesco_acudiente"><br> Dirección:<inpu
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <h2>Ojos:<br> </h2>
+<br>
 
-<label><input type="radio" name="ojos" value="cataratas">Cataratas<br>
-<label><input type="radio" name="ojos1" value="pterigios">Pterigios<br></label>
-<label><input type="radio" name="ojos2" value="lentes">Lentes<br></label>
-<label><input type="radio" name="ojos3" value="parpados">Parpados caídos<br></label>
+<label><select name="cataratas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Cataratas<br> </label>
+<br>
+<label><select name="pterigios" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Pterigios<br> </label>
+<br>
+<label><select name="lentes" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Lentes<br> </label>
+<br>
+<label><select name="parpados" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Parpados caídos<br> </label>
 
-            <button id="unselect" onclick="unselect()">Limpiar</button>
-        
+
         <br>
          <br>
- <br>
- <br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
        
 <h2>Boca:<br>  </h2>
-<label><input type="radio" name="boca" value="dentadura">Sin dentadura<br></label>
-<label><input type="radio" name="boca1" value="protesis">Usa Prótesis<br></label>
-<label><input type="radio" name="boca2" value="total">Prótesis total<br></label>
-<label><input type="radio" name="boca3" value="parcial">Prótesis parcial<br></label>
-<label><input type="radio" name="boca4" value="naturales">Dientes naturales<br></label>
+<br>
+<label><select name="dentadura" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Sin dentadura<br> </label>
 
-            <button id="unselect" onclick="unselect()">Limpiar</button>
-         <br>
- <br>
+<br>
+
+<label><select name="protesis" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Usa Prótesis<br> </label>
+<br>
+
+<label><select name="protesis_total" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Prótesis total<br> </label>
+<br>
+<label><select name="protesis_parcial" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Prótesis parcial<br> </label>
+<br>
+<label><select name="dientes_naturales" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Dientes naturales<br> </label>
+<br>
+
+
  <br>
    <br>
  
@@ -177,40 +220,85 @@ Parentesco: <input type="text" name="parentesco_acudiente"><br> Dirección:<inpu
 <br>
 <h2>Deficiencia para percibir sonidos</h2>
 <br>
-<label><input type="radio" name="oidos" value="leve">Leve <br></label>
-<label><input type="radio" name="oidos1" value="moderado">Moderada <br></label>
-<label><input type="radio" name="oidos2" value="total">Total <br> </label>
 
-            <button id="unselect" onclick="unselect()">Limpiar</button>
-         <br>
- <br>
+<br>
+<label><select name="leve" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Leve<br> </label>
+
+<br>
+<label><select name="moderada" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Moderada<br> </label>
+
+<br>
+<label><select name="total" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Total<br> </label>
+<br>
+
  <br>
 <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <h2>Piel: </h2>
+<br>
+<label><select name="alergias" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Alergias<br> </label>
+<br>
+<label><select name="tipo_alergias" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Tipo de alergias<br> </label>
+<br>
+<label><select name="resequedad" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Resequedad<br> </label>
+<br>
+<label><select name="lesiones" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Lesiones<br> </label>
+<br>
 
-<label><input type="radio" name="piel" value="leve">Alergias <br></label>
-<label><input type="radio" name="piel1" value="moderado">Tipo de alergias <br></label>
-<label><input type="radio" name="piel2" value="total">Resequedad <br></label>
-<label><input type="radio" name="piel3" value="total">Lesiones <br></label> 
 
-            <button id="unselect" onclick="unselect()">Limpiar</button>
-    <br>
- <br>
 <br>    
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <h2>Uñas: </h2>
-
-<label><input type="radio" name="uñas" value="leve">Alteraciones en las uñas <br></label>
-<label><input type="radio" name="uñas1" value="moderado">Hongos <br></label>
-<label><input type="radio" name="uñas2" value="total">Cambio de color <br></label>
-
-            <button id="unselect" onclick="unselect()">Limpiar</button>
-       <br>
- <br>
+<br>
+<label><select name="alteraciones_unas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Alteraciones en las uñas<br> </label>
+<br>
+<label><select name="hongos" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Hongos<br> </label>
+<br>
+<label><select name="cambio_color" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Cambio de color<br> </label>
+<br>
 <br>
 
 <h2>Sistema músculo esquelético</h2> 
@@ -255,41 +343,103 @@ Actitud durante la entrevista: <input type="text" name="actitud_entrevista"><br>
 
 <h2>Presenta dificultad en:</h2>
 
-
-
+<br><label><select name="memoria_presente" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Memoria presente<br> </label>
+<br>
+<label><select name="memoria_pasada" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Memoria pasada<br> </label>
+<br>
+<label><select name="atencion" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Atención<br> </label>
+<br>
+<label><select name="lectoescritura" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Lectoescritura<br> </label>
+<br>
+<label><select name="lenguaje_hablado" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Lenguaje hablado<br> </label>
+<br>
+<label><select name="curso_pensamiento" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Curso del pensamiento<br> </label>
+<br>
+<label><select name="razonamiento" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Razonamiento<br> </label>
 <br>
 
-<label><input type="radio" name="presenta" value="memoria">Memoria presente <br></label>
-<label><input type="radio" name="presenta1" value="pasada">Memoria pasada <br></label>
-<label><input type="radio" name="presenta2" value="atencion">Atención <br></label>
-<label><input type="radio" name="presenta3" value="lectoescritura">Lectoescritura <br></label>
-<label><input type="radio" name="presenta4" value="lenguaje">Lenguaje hablado <br></label>
-<label><input type="radio" name="presenta5" value="curso">Curso del pensamiento  <br></label>
-<label><input type="radio" name="presenta6" value="razonamiento">Razonamiento <br></label>
-
-<button id="unselect" onclick="unselect()">Limpiar</button>
-
- <br>
- <br>
  <br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <h2>Área emocional y comportamiento durante la evaluación: </h2>
-
 <br>
+<label><select name="muestra_angustia" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Muestra angustia<br> </label>
+<br>
+<label><select name="presenta_llanto" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Presenta llanto<br> </label>
+<br>
+<label><select name="manifiesta_no_institucion" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Manifiesta no querer estar en la institución <br> </label>
+<br>
+<label><select name="ideas_suicidas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Aparecen ideas suicidas<br> </label>
+<br>
+<label><select name="manifiesta_agresividad" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Manifiesta agresividad<br> </label>
+<br>
+<label><select name="observa_tranquilo" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Se observa tranquilo<br> </label>
+<br>
+<label><select name="proyecto_vida" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Tiene proyecto de vida<br> </label>
+<br>
+<label><select name="espera_muerte" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Solo espera la muerte <br> </label>
 
-<label><input type="radio" name="area" value="muestra">Muestra angustia <br> </label>
-<label><input type="radio" name="area1" value="presenta">presenta llanto <br></label>
-<label><input type="radio" name="area2" value="manifiesta">Manifiesta no querer estar en la institución <br></label>
-<label><input type="radio" name="area3" value="aparecen">Aparecen ideas suicidas <br></label>
-<label><input type="radio" name="area4" value="agresividad">Manifiesta agresividad <br></label>
-<label><input type="radio" name="area5" value="observa">Se observa tranquilo <br></label>
-<label><input type="radio" name="area6" value="proyecta">Tiene proyecto de vida <br></label>
-<label><input type="radio" name="area7" value="muerte">Solo espera la muerte <br></label>
-<button id="unselect" onclick="unselect()">Limpiar</button>
-
-  <br>
  <br>
  <br>
 <h2>AREA SOCIOFAMILIAR<h2>
@@ -366,25 +516,103 @@ Tiene facilidad para comunicarse:
 
 <h2>Intereses (aquello que llama la atención y crea expectativas en la persona):</h2>
 <br>
-
-<label><input type="radio" name="intereses" value="religiosos">Religioso <br> </label>
-<label><input type="radio" name="intereses1" value="cultural">Artística cultural<br></label>
-<label><input type="radio" name="intereses2" value="intelectual">Intelectual y/o científico<br></label>
-<label><input type="radio" name="intereses3" value="manual">Manuales <br></label>
-<label><input type="radio" name="intereses4" value="actitudes">Actitudes (idoneidad natural o adquirida para algo) <br></label>
-<label><input type="radio" name="intereses" value="dibujo">Dibujo <br></label>
-<label><input type="radio" name="intereses1" value="pintar">Pintar <br></label>
-<label><input type="radio" name="intereses2" value="danzar">Danzar <br></label>
-<label><input type="radio" name="intereses3" value="bailar">Bailar <br></label>
-<label><input type="radio" name="intereses4" value="teatro">Teatro <br></label>
-<label><input type="radio" name="intereses5" value="poesia">Poesía <br></label>
-<label><input type="radio" name="intereses6" value="canto">Canto <br></label>
-<label><input type="radio" name="intereses7" value="escritura">Escritura <br></label>
-<label><input type="radio" name="intereses8" value="deportivas">Deportivas  <br></label>
-<label><input type="radio" name="intereses9" value="liderazgo">Liderazgo <br></label>
-<label><input type="radio" name="intereses10" value="humanisticas">Humanísticas<br></label>
- <button id="unselect" onclick="unselect()">Limpiar</button>
+<label><select name="religiosos" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Religioso<br> </label>
 <br>
+<label><select name="cultural" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Artística cultural<br> </label>
+<br>
+<label><select name="intelectual_cientifico" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Intelectual y/o científico<br> </label>
+<br>
+<label><select name="manuales" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Manuales<br> </label>
+<br>
+<label><select name="actitudes" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Actitudes (idoneidad natural o adquirida para algo)<br> </label>
+<br>
+<label><select name="dibujo" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Dibujo<br> </label>
+<br>
+<label><select name="pintar" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Pintar<br> </label>
+<br>
+<label><select name="danzar" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Danzar<br> </label>
+<br>
+<label><select name="bailar" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Bailar<br> </label>
+<br>
+<label><select name="teatro" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Teatro<br> </label>
+<br>
+<label><select name="poesia" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Poesía<br> </label>
+<br>
+
+<label><select name="canto" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Canto<br> </label>
+<br>
+<label><select name="escritura" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Escritura<br> </label>
+<br>
+<label><select name="deportivas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Deportivas<br> </label>
+<br>
+<label><select name="liderazgo" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Liderazgo<br> </label>
+<br>
+<label><select name="humanisticas" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Humanísticas<br> </label>
+
  <br>
 <br>
 
@@ -421,7 +649,7 @@ Aprobada por:  <input type="text" name="aprobada_por"><br>
 <input type="submit" name="Guardar">
 <input type="reset" name="Limpiar">
 
-<footer style="height: 3%">
+<footer style="height: 100%">
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-6 text-left">

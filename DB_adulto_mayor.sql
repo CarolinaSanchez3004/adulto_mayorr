@@ -111,25 +111,88 @@ CREATE TABLE historia_datos_adulto_mayor (
     telefono_acudiente VARCHAR(15)
 );
 
-CREATE TABLE historia_valoracion_fisica(
-    ojos TEXT,
-    boca TEXT,
-    oidos_deficiencia TEXT,
-    piel TEXT,
-    uñas TEXT,
-    disminucion_muscular VARCHAR(20),
-    parálisis_algun_lado_del_cuerpo BIT,
+CREATE TABLE valoracion_fisica_ojos (
+cataratas VARCHAR (5),
+pterigios VARCHAR (5),
+lentes VARCHAR (5),
+parpados VARCHAR (5),
+);
+CREATE TABLE valoracion_fisica_boca (
+dentadura VARCHAR (5),
+protesis VARCHAR (5),
+protesis_total VARCHAR (5),
+protesis_parcial VARCHAR (5),
+dientes_naturales VARCHAR (5),
+);
+
+CREATE TABLE valoracion_fisica_oidos (
+leve VARCHAR (5),
+moderada VARCHAR (5),
+total VARCHAR (5),
+);
+CREATE TABLE valoracion_fisica_piel (
+alergias VARCHAR (5),
+tipo_alergias VARCHAR (5),
+resequedad VARCHAR (5),
+lesiones VARCHAR (5),
+);
+
+CREATE TABLE valoracion_fisica_unas (
+alteraciones_unas VARCHAR (5),
+hongos VARCHAR (5),
+cambio_color VARCHAR (5),
+);
+CREATE TABLE sistema_musculo_esqueletico (
+disminucion_muscular VARCHAR(20),
+paralisis_algun_lado_del_cuerpo BIT,
+);
+CREATE TABLE area_personal (
     apariencia_fisica,
     presentacion_personal VARCHAR(20),
     actitud_entrevista VARCHAR(20),
-    presenta_dificultad VARCHAR(20),
-    comportamiento_durante_evaluacion VARCHAR(20),
-    hace_amigos VARCHAR(20),
-    pertenece_grupos VARCHAR(20),
-    maneja_relaciones VARCHAR(20),
-    manifiesta_preocupaciones VARCHAR(20),
-    facilidad_comunicarse VARCHAR(20),
-    intereses VARCHAR(20),
+);
+CREATE TABLE area_cognitiva (
+memoria_presente BIT,
+memoria_pasada BIT,
+atencion BIT,
+lectoescritura BIT,
+lenguaje_hablado BIT,
+curso_pensamiento BIT,
+razonamiento BIT,
+);
+CREATE TABLE area_emocional (
+manifiesta_no_institucion BIT,
+ideas_suicidas BIT,
+manifiesta_agresividad BIT,
+observa_tranquilo BIT,
+proyecto_vida BIT,
+espera_muerte BIT,
+);
+CREATE TABLE sistema_relaciones (
+    hace_amigos BIT,
+    pertenece_grupos BIT,
+    maneja_relaciones BIT,
+    manifiesta_preocupaciones BIT,
+    facilidad_comunicarse BIT,
+);
+CREATE TABLE intereses (
+    religiosos BIT,
+	 cultural BIT,
+	 intelectual_cientifico BIT,
+	 manuales BIT,
+	 actitudes BIT,
+	 dibujo BIT,
+	 pintar  BIT,
+	 danzar BIT,
+	 bailar BIT,
+	 teatro BIT,
+	 poesia BIT,
+	 canto BIT,
+	 escritura BIT,
+	 deportivas BIT,
+	 liderazgo BIT,
+	 humanisticas BIT,
+);
     intervención_gerontologica VARCHAR(100),
 );
 
@@ -154,16 +217,62 @@ CREATE TABLE escala_lawton_brody(
     aplicado_por VARCHAR(60),
 );
 
-CREATE TABLE preguntas_escala_lawton_brody (
-    pregunta_1 VARCHAR(10),
-    pregunta_2 VARCHAR(10),
-    pregunta_3 VARCHAR(10),
-    pregunta_4 VARCHAR(10),
-    pregunta_5 VARCHAR(10),
-    pregunta_6 VARCHAR(10),
-    pregunta_7 VARCHAR(10),
-    pregunta_8 VARCHAR(10),
-    total VARCHAR (15)
+CREATE TABLE pregunta_uno_lawton (
+capacidad_telefono BIT,
+marcar_numeros BIT,
+contestar_telefono BIT,
+total_uno VARCHAR(10),
+);
+CREATE TABLE pregunta_dos_lawton (
+realiza_compras_necesarias BIT,
+compras_independiente BIT,
+acompanado_compra BIT,
+incapaz_comprar BIT,
+total_dos VARCHAR(10),
+);
+CREATE TABLE pregunta_tres_lawton (
+organiza_comida BIT,
+adecuadamente_comida BIT,
+sirve_comida BIT,
+necesita_comida BIT,
+total_tres VARCHAR(10),
+);
+CREATE TABLE pregunta_cuatro_lawton (
+mantiene_casa_solo BIT,
+realiza_tareas_ligeras BIT,
+nivel_bajo_limpieza BIT,
+ayuda_labores BIT,
+no_labora_casa BIT,
+total_cuatro VARCHAR(10),
+);
+CREATE TABLE pregunta_cinco_lawton (
+lava_ropa BIT,
+lava_pequenas_prendas BIT,
+lava_otro BIT,
+total_cinco VARCHAR(10),
+);
+CREATE TABLE pregunta_seis_lawton (
+viaja_solo BIT,
+coge_taxi BIT,
+transporte_publico BIT,
+utiliza_automovil BIT,
+no_viaja BIT,
+total_seis  VARCHAR(10),
+);
+CREATE TABLE pregunta_siete_lawton (
+medicacion_solo BIT,
+medicacion_previa BIT,
+no_administra_medicacion  BIT,
+total_siete VARCHAR(10),
+);
+CREATE TABLE pregunta_ocho_lawton (
+economicos_solo BIT,
+compras_ayuda BIT,
+economicos_ayuda BIT,
+total_ocho VARCHAR(10),
+);
+CREATE TABLE total_lawton_brody (
+total_todo VARCHAR(20),
 );
 
 CREATE TABLE datos_funcionario (
@@ -186,19 +295,80 @@ CREATE TABLE escala_mental (
     aplicado_por VARCHAR(60),
 );
 
-CREATE TABLE preguntas_escala_mental (
-    pregunta_1 VARCHAR(10),
-    pregunta_2 VARCHAR(10),
-    pregunta_3 VARCHAR(10),
-    pregunta_4 VARCHAR(10),
-    pregunta_5 VARCHAR(10),
-    pregunta_6 VARCHAR(10),
-    pregunta_7 VARCHAR(10),
-    pregunta_8 VARCHAR(10),
-    pregunta_9 VARCHAR(10),
-    pregunta_10 VARCHAR(10),
-    pregunta_11 VARCHAR(10),
-    total VARCHAR (15)
+CREATE TABLE pregunta_uno (
+dia_estamos BIT,
+mes_estamos BIT,
+ano_estamos BIT,
+dia_semana BIT,
+hora_estamos BIT,
+puntuacion_uno VARCHAR(10),
+);
+CREATE TABLE pregunta_dos(
+dia_estamos_dos BIT,
+mes_estamos_dos BIT,
+ano_estamos_dos BIT,
+dia_semana_dos BIT,
+hora_estamos_dos BIT,
+puntuacion_dos VARCHAR(10),
+);
+CREATE TABLE pregunta_tres(
+lugar_estamos BIT,
+departamento_estamos BIT,
+barrio_actual BIT,
+ciudad_estamos BIT,
+pais_estamos BIT,
+puntuacion_tres VARCHAR(10),
+);
+CREATE TABLE pregunta_cuatro (
+repeticion_ensayo BIT,
+papel BIT,
+bicicleta BIT,
+cuchara BIT,
+puntuacion_cuatro VARCHAR(10),
+);
+CREATE TABLE pregunta_cinco(
+uno BIT,
+dos BIT,
+tres BIT,
+cuatro BIT,
+cinco BIT,
+puntuacion_cinco VARCHAR(10),
+);
+CREATE TABLE pregunta_seis(
+papel_uno BIT,
+bicicleta_dos BIT,
+cuchara_tres BIT,
+puntuacion_seis VARCHAR(10),
+);
+CREATE TABLE pregunta_siete(
+mostrarle_lapiz BIT,
+mostrarle_reloj BIT,
+puntuacion_siete VARCHAR(10),
+);
+CREATE TABLE pregunta_ocho(
+consigna BIT,
+puntuacion_ocho VARCHAR(10),
+);
+CREATE TABLE pregunta_nueve(
+comprension_ejecucion BIT,
+doblar_mitad BIT,
+dejelo_suelo BIT,
+puntuacion_nueve VARCHAR(10),
+);
+CREATE TABLE pregunta_diez(
+pidale_leer BIT,
+puntuacion_diez VARCHAR(10),
+);
+CREATE TABLE pregunta_once(
+escriba_frase BIT,
+puntuacion_once VARCHAR(10),
+);
+CREATE TABLE pregunta_doce(
+copie_dibujo BIT,
+puntuacion_doce VARCHAR(10),
+);
+CREATE TABLE total_preguntas(
+puntuacion_total VARCHAR(10),
 );
 
 CREATE TABLE datos_funcionario (
@@ -222,22 +392,23 @@ CREATE TABLE escala_mental (
 );
 
 CREATE TABLE preguntas_escala_depresion (
-    pregunta_1 VARCHAR(5),
-    pregunta_2 VARCHAR(5),
-    pregunta_3 VARCHAR(5),
-    pregunta_4 VARCHAR(5),
-    pregunta_5 VARCHAR(5),
-    pregunta_6 VARCHAR(5),
-    pregunta_7 VARCHAR(5),
-    pregunta_8 VARCHAR(5),
-    pregunta_9 VARCHAR(5),
-    pregunta_10 VARCHAR(5),
-    pregunta_11 VARCHAR(5),
-    pregunta_12 VARCHAR(5),
-    pregunta_13 VARCHAR(5),
-    pregunta_14 VARCHAR(5),
-    pregunta_15 VARCHAR(5),
-    total VARCHAR (15)
+satisfecho_vida VARCHAR(10),
+intereses_actividades VARCHAR(10),
+vida_vacia VARCHAR(10),
+aburrido_frecuentemente VARCHAR(10),
+animo_todo_tiempo VARCHAR(10),
+preocupado_malo VARCHAR(10),
+feliz_tiempo VARCHAR(10),
+frecuencia_desamparado VARCHAR(10),
+cosas_nuevas VARCHAR(10),
+problemas_memoria VARCHAR(10),
+maravilloso_vivo VARCHAR(10),
+inutil_desprecio VARCHAR(10),
+lleno_energia VARCHAR(10),
+situacion_actual VARCHAR(10),
+percepcion VARCHAR(10),
+total_todo VARCHAR(20),
+
 );
 
 CREATE TABLE datos_funcionario (
@@ -246,6 +417,7 @@ CREATE TABLE datos_funcionario (
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
 );
+
 
 CREATE TABLE instrumento_progama (
     id_instrumento_progama INT PRIMARY KEY,

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/css.css">
     <link rel="icon" href="img/html.png">
     <font face= "Time new roman">
+    <meta charset="utf-8">
 
 </head>
 
@@ -580,17 +581,17 @@ Teléfono: <input type="text" name="telefono"><br>
 <br>
 
 <select name="tipo_vivienda" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Propia</option>
-	<option value="no">Familiar</option>
-	<option value="si">Arrendada</option>
-	<option value="no">Otra. ¿Cual?:</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="propia">Propia</option>
+	<option value="familiar">Familiar</option>
+	<option value="arrendada">Arrendada</option>
+	<option value="otra_cual">Otra. ¿Cual?:</option>
 </select>
 <br>
 
 <h2>Tenencia de la vivienda: <br> </h2>
 <select name="tenencia_vivienda" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
+	<option value="seleccione">--Seleccione--</option>
 	<option value="si">Si</option>
 	<option value="no">No</option>
 </select>
@@ -599,9 +600,9 @@ Estrato: <input type="text" name="estrato">
 <h2>Ubicación:</h2>
 
 <select name="ubicacion" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Urbana</option>
-	<option value="no">Rural</option>
+	<option value="seleccione">--Seleccione--</option>
+	<option value="urbana">Urbana</option>
+	<option value="rural">Rural</option>
 </select>
 
  <br>	
@@ -617,19 +618,50 @@ Estrato: <input type="text" name="estrato">
 
 <h2>Equipamiento de Servicios públicos:	<br> </h2>
 
+<label><select name="acueducto" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Acueducto y alcantarillado<br> </label>
 
-
-<label><input type="radio" name="acueducto" value="leve">Acueducto y alcantarillado<br></label>
-<label><input type="radio" name="energia" value="moderado">Energía <br></label>
-<label><input type="radio" name="basura" value="total">Manejo de basuras <br></label>
-<label><input type="radio" name="gas" value="total">Gas domiciliario <br></label> 
-<label><input type="radio" name="television" value="total">Televisión <br></label>
-<label><input type="radio" name="internet" value="total">Internet <br></label> 
-<button id="unselect" onclick="unselect()">Limpiar</button>
-        
-        <br>
-         <br>
  <br>
+ <label><select name="energia" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Energía<br> </label>
+
+ <br>
+ <label><select name="manejo_basuras" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Manejo de basuras<br> </label>
+
+ <br>
+ <label><select name="gas_domiciliario" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Gas domiciliario<br> </label>
+
+ <br>
+ <label><select name="television" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Televisión<br> </label>
+
+ <br>
+ <label><select name="internet" style="width: 100px";>
+	 
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select>Internet<br> </label>
+
+ <br>
+
+
  <br>
 <br>
 <h2>Distribución de Espacios: <br> </h2>
