@@ -1,14 +1,5 @@
-CREATE TABLE usuarios(
-    id_usuario INT PRIMARY KEY  AUTO_INCREMENT,
-    nombre VARCHAR(80),
-    cargo VARCHAR(30),
-    registro_profesional VARCHAR(20),
-    numero_identificacion VARCHAR(15),
-    correo VARCHAR(80)
-);
-
 CREATE TABLE ficha_progama (
-    id_ficha_progama INT PRIMARY KEY  AUTO_INCREMENT,
+    id_ficha_progama INT PRIMARY KEY,
     nombre_programa VARCHAR(50), 
     vigencia DATE,
     fecha_digilenciamiento DATE
@@ -75,25 +66,20 @@ CREATE TABLE ficha_compromiso_condiciones_especificas_adulto_mayor (
 
 CREATE TABLE ficha_funcionario (
     id_ficha_funcionario INT PRIMARY KEY,
+    nombre VARCHAR(80),
+    cargo VARCHAR(30),
+    registro_profesional VARCHAR(20),
+    numero_identificacion VARCHAR(15),
     id_ficha_progama INT,
-    id_usuario INT,
-    foreign key (id_ficha_progama) references ficha_progama(id_ficha_progama),
-    foreign key (id_usuario) references usuarios(id_usuario)
+    foreign key (id_ficha_progama) references ficha_progama(id_ficha_progama)
 );
-
-
-
-
-
-
 
 
 
 
 CREATE TABLE historia_progama (
     id_historia_progama INT PRIMARY KEY,
-    fecha_apertura DATE,
-    numero_identificacion VARCHAR(15)
+    fecha_apertura DATE
 );
 
 CREATE TABLE historia_datos_adulto_mayor (
