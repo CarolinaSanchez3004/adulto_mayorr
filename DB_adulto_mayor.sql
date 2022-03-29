@@ -77,9 +77,10 @@ CREATE TABLE ficha_funcionario (
 
 
 
-CREATE TABLE historia_progama (
-    id_historia_progama INT PRIMARY KEY,
+CREATE TABLE historia_programa (
+    id_historia_programa INT PRIMARY KEY,
     fecha_apertura DATE
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE historia_datos_adulto_mayor (
@@ -111,47 +112,44 @@ CREATE TABLE historia_datos_adulto_mayor (
     telefono_acudiente VARCHAR(15)
 );
 
-CREATE TABLE valoracion_fisica_ojos (
+CREATE TABLE valoracion_fisica (
+id_valoracion_fisica INT PRIMARY KEY,
 cataratas VARCHAR (5),
 pterigios VARCHAR (5),
 lentes VARCHAR (5),
 parpados VARCHAR (5),
-);
-CREATE TABLE valoracion_fisica_boca (
 dentadura VARCHAR (5),
 protesis VARCHAR (5),
 protesis_total VARCHAR (5),
 protesis_parcial VARCHAR (5),
 dientes_naturales VARCHAR (5),
-);
-
-CREATE TABLE valoracion_fisica_oidos (
 leve VARCHAR (5),
 moderada VARCHAR (5),
 total VARCHAR (5),
-);
-CREATE TABLE valoracion_fisica_piel (
 alergias VARCHAR (5),
 tipo_alergias VARCHAR (5),
 resequedad VARCHAR (5),
 lesiones VARCHAR (5),
-);
-
-CREATE TABLE valoracion_fisica_unas (
 alteraciones_unas VARCHAR (5),
 hongos VARCHAR (5),
 cambio_color VARCHAR (5),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE sistema_musculo_esqueletico (
+id_sistema_musculo_esqueletico INT PRIMARY KEY,
 disminucion_muscular VARCHAR(20),
 paralisis_algun_lado_del_cuerpo BIT,
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE area_personal (
+    id_area_personal INT PRIMARY KEY,
     apariencia_fisica,
     presentacion_personal VARCHAR(20),
     actitud_entrevista VARCHAR(20),
+    numero_identificacion VARCHAR(15),
 );
 CREATE TABLE area_cognitiva (
+id_area_cognitiva INT PRIMARY KEY,
 memoria_presente BIT,
 memoria_pasada BIT,
 atencion BIT,
@@ -159,24 +157,30 @@ lectoescritura BIT,
 lenguaje_hablado BIT,
 curso_pensamiento BIT,
 razonamiento BIT,
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE area_emocional (
+id_area_emocional INT PRIMARY KEY,
 manifiesta_no_institucion BIT,
 ideas_suicidas BIT,
 manifiesta_agresividad BIT,
 observa_tranquilo BIT,
 proyecto_vida BIT,
 espera_muerte BIT,
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE sistema_relaciones (
+    id_sistema_relaciones INT PRIMARY KEY,
     hace_amigos BIT,
     pertenece_grupos BIT,
     maneja_relaciones BIT,
     manifiesta_preocupaciones BIT,
     facilidad_comunicarse BIT,
+    numero_identificacion VARCHAR(15),
 );
 CREATE TABLE intereses (
-    religiosos BIT,
+     id_intereses INT PRIMARY KEY,
+     religiosos BIT,
 	 cultural BIT,
 	 intelectual_cientifico BIT,
 	 manuales BIT,
@@ -192,11 +196,16 @@ CREATE TABLE intereses (
 	 deportivas BIT,
 	 liderazgo BIT,
 	 humanisticas BIT,
+     numero_identificacion VARCHAR(15),
 );
-    intervención_gerontologica VARCHAR(100),
+CREATE TABLE intervencion_gerontologica (
+    id_intervencion_gerontologica INT PRIMARY KEY,
+    intervencion_gerontologica TEXT (100),
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE historia_funcionario (
+    id_historia_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
@@ -215,67 +224,87 @@ CREATE TABLE escala_lawton_brody(
     edad_meses INT,
     fecha_aplicacion DATE,
     aplicado_por VARCHAR(60),
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE pregunta_uno_lawton (
+id_pregunta_uno_lawton INT PRIMARY KEY,
 capacidad_telefono BIT,
 marcar_numeros BIT,
 contestar_telefono BIT,
 total_uno VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_dos_lawton (
+id_pregunta_dos_lawton INT PRIMARY KEY,
 realiza_compras_necesarias BIT,
 compras_independiente BIT,
 acompanado_compra BIT,
 incapaz_comprar BIT,
 total_dos VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_tres_lawton (
+id_pregunta_tres_lawton INT PRIMARY KEY,
 organiza_comida BIT,
 adecuadamente_comida BIT,
 sirve_comida BIT,
 necesita_comida BIT,
 total_tres VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_cuatro_lawton (
+id_pregunta_cuatro_lawton INT PRIMARY KEY,
 mantiene_casa_solo BIT,
 realiza_tareas_ligeras BIT,
 nivel_bajo_limpieza BIT,
 ayuda_labores BIT,
 no_labora_casa BIT,
 total_cuatro VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_cinco_lawton (
+id_pregunta_cinco_lawton INT PRIMARY KEY,
 lava_ropa BIT,
 lava_pequenas_prendas BIT,
 lava_otro BIT,
 total_cinco VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_seis_lawton (
+id_pregunta_seis_lawton INT PRIMARY KEY,
 viaja_solo BIT,
 coge_taxi BIT,
 transporte_publico BIT,
 utiliza_automovil BIT,
 no_viaja BIT,
 total_seis  VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_siete_lawton (
+id_pregunta_siete_lawton INT PRIMARY KEY,
 medicacion_solo BIT,
 medicacion_previa BIT,
 no_administra_medicacion  BIT,
 total_siete VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_ocho_lawton (
+id_pregunta_ocho_lawton INT PRIMARY KEY,
 economicos_solo BIT,
 compras_ayuda BIT,
 economicos_ayuda BIT,
 total_ocho VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE total_lawton_brody (
+id_total_lawton_brody INT PRIMARY KEY,
 total_todo VARCHAR(20),
+numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE datos_funcionario (
+    id_datos_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
@@ -293,85 +322,113 @@ CREATE TABLE escala_mental (
     edad_meses INT,
     fecha_aplicacion DATE,
     aplicado_por VARCHAR(60),
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE pregunta_uno (
+id_pregunta_uno INT PRIMARY KEY,
 dia_estamos BIT,
 mes_estamos BIT,
 ano_estamos BIT,
 dia_semana BIT,
 hora_estamos BIT,
 puntuacion_uno VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_dos(
+id_pregunta_dos INT PRIMARY KEY,
 dia_estamos_dos BIT,
 mes_estamos_dos BIT,
 ano_estamos_dos BIT,
 dia_semana_dos BIT,
 hora_estamos_dos BIT,
 puntuacion_dos VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_tres(
+id_pregunta_tres INT PRIMARY KEY,
 lugar_estamos BIT,
 departamento_estamos BIT,
 barrio_actual BIT,
 ciudad_estamos BIT,
 pais_estamos BIT,
 puntuacion_tres VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_cuatro (
+id_pregunta_cuatro INT PRIMARY KEY,
 repeticion_ensayo BIT,
 papel BIT,
 bicicleta BIT,
 cuchara BIT,
 puntuacion_cuatro VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_cinco(
+id_pregunta_cinco INT PRIMARY KEY,
 uno BIT,
 dos BIT,
 tres BIT,
 cuatro BIT,
 cinco BIT,
 puntuacion_cinco VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_seis(
+id_pregunta_seis INT PRIMARY KEY,
 papel_uno BIT,
 bicicleta_dos BIT,
 cuchara_tres BIT,
 puntuacion_seis VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_siete(
+id_pregunta_siete INT PRIMARY KEY,
 mostrarle_lapiz BIT,
 mostrarle_reloj BIT,
 puntuacion_siete VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_ocho(
+id_pregunta_ocho INT PRIMARY KEY,
 consigna BIT,
 puntuacion_ocho VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_nueve(
+id_pregunta_nueve INT PRIMARY KEY,
 comprension_ejecucion BIT,
 doblar_mitad BIT,
 dejelo_suelo BIT,
 puntuacion_nueve VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_diez(
+id_pregunta_diezpregunta_diez INT PRIMARY KEY,
 pidale_leer BIT,
 puntuacion_diez VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_once(
+id_pregunta_once INT PRIMARY KEY,
 escriba_frase BIT,
 puntuacion_once VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE pregunta_doce(
+id_pregunta_doce INT PRIMARY KEY,
 copie_dibujo BIT,
 puntuacion_doce VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 CREATE TABLE total_preguntas(
+id_total_preguntas INT PRIMARY KEY,
 puntuacion_total VARCHAR(10),
+numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE datos_funcionario (
+    id_datos_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
@@ -389,9 +446,11 @@ CREATE TABLE escala_mental (
     edad_meses INT,
     fecha_aplicacion DATE,
     aplicado_por VARCHAR(60),
+    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE preguntas_escala_depresion (
+id_preguntas_escala_depresion INT PRIMARY KEY,
 satisfecho_vida VARCHAR(10),
 intereses_actividades VARCHAR(10),
 vida_vacia VARCHAR(10),
@@ -408,10 +467,12 @@ lleno_energia VARCHAR(10),
 situacion_actual VARCHAR(10),
 percepcion VARCHAR(10),
 total_todo VARCHAR(20),
+numero_identificacion VARCHAR(15),
 
 );
 
 CREATE TABLE datos_funcionario (
+    id_datos_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
@@ -419,14 +480,14 @@ CREATE TABLE datos_funcionario (
 );
 
 
-CREATE TABLE instrumento_progama (
-    id_instrumento_progama INT PRIMARY KEY,
+CREATE TABLE instrumento_programa (
+    id_instrumento_programa INT PRIMARY KEY,
     fecha_digilenciamiento DATE,
     numero_identificacion VARCHAR(15)
 );
 
 CREATE TABLE instrumento_datos_adulto_mayor (
-    id_instrumento_datos_usuario INT PRIMARY KEY,
+    id_instrumento_datos_adulto_mayor INT PRIMARY KEY,
     nombres_apellidos VARCHAR(120),
     sexo VARCHAR (20),
     direccion_residencial VARCHAR(60),
@@ -443,7 +504,7 @@ CREATE TABLE instrumento_datos_adulto_mayor (
     educacion VARCHAR(25),
     profesion VARCHAR(20),
     otros_oficios VARCHAR(20),
-    se_encuentra_afiliado_eps VARCHAR(5),
+    se_encuentra_afiliado_eps BIT,
     sisben VARCHAR(5),
     cual_sisben VARCHAR(10),
     eps VARCHAR(5),
@@ -466,19 +527,25 @@ CREATE TABLE instrumento_datos_ambiente_servicios_vivienda (
     pisos VARCHAR (10),
     vias_acceso VARCHAR (10),
     transporte VARCHAR (10),
-    material_vivienda VARCHAR (40)
+agua BIT,
+luz BIT,
+telefono BIT,
+gas BIT,
+alcantarillado BIT,
+material_vivienda VARCHAR (40)
+numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE instrumento_estado_salud_patologias (
     id_instrumento_estado_salud_patologias INT PRIMARY KEY,
-    hipertension VARCHAR(5),
-    diabetes VARCHAR(5),
-    enfermedades_cardiacas VARCHAR(5),
-    osteoporosis VARCHAR(5),
-    asma VARCHAR(5),
-    artritis VARCHAR(5),
-    cancer VARCHAR(5),
-    demencia VARCHAR(5),
+    hipertension BIT,
+    diabetes BIT,
+    enfermedades_cardiacas BIT,
+    osteoporosis BIT,
+    asma BIT,
+    artritis BIT,
+    cancer BIT,
+    demencia BIT,
     otras VARCHAR(20),
     numero_identificacion VARCHAR(15),
     dolor_articulaciones VARCHAR(15),
@@ -495,41 +562,42 @@ CREATE TABLE instrumento_estado_salud_patologias (
     adormilado VARCHAR(15),
     boca_seca VARCHAR(15),
     hormigueo_manos_pies VARCHAR(15)
+    
 );
 
 CREATE TABLE instrumento_consumo_medicamentos (
     id_instrumento_consumo_medicamentos INT PRIMARY KEY,
-    consume_medicamentos VARCHAR(5),
+    consume_medicamentos BIT,
     cuantos_medicamentos VARCHAR(10),
     cuales_medicamentos VARCHAR(60),
-    recibe_tratamiento VARCHAR(5),
+    recibe_tratamiento BIT,
     cual_tratamiento VARCHAR(20),
     frecuencia_visita_medico VARCHAR(20),
     otros_datos VARCHAR(20),
-    medicamentos_no_prescritos VARCHAR(5),
+    medicamentos_no_prescritos BIT,
     cuales_no_prescritos VARCHAR(60),
     numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE instrumento_habitos_adulto_mayor (
     id_instrumento_habitos_adulto_mayor INT PRIMARY KEY,
-    cambio_habitos_alimenticios VARCHAR(5),
-    come_menos_dos_veces VARCHAR(5),
-    tiene_problemas_dentales VARCHAR(5),
-    come_pocas_frutas VARCHAR(5),
-    come_solo VARCHAR(5),
-    realiza_ejercicio VARCHAR(5),
-    frecuencia_realiza_ejercicio VARCHAR(5),
-    fuma VARCHAR(5),
-    cuantos_cigarrillos VARCHAR(5),
-    consume_licor VARCHAR(5),
-    frecuencia_consume_licor VARCHAR(5),
-    cantidad_consume_licor VARCHAR(5),
+    cambio_habitos_alimenticios BIT,
+    come_menos_dos_veces BIT,
+    tiene_problemas_dentales BIT,
+    come_pocas_frutas BIT,
+    come_solo BIT,
+    realiza_ejercicio BIT,,
+    frecuencia_realiza_ejercicio VARCHAR(15),
+    fuma BIT,
+    cuantos_cigarrillos VARCHAR(15),
+    consume_licor BIT,
+    frecuencia_consume_licor VARCHAR(15),
+    cantidad_consume_licor VARCHAR(15),
     numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE instrumento_funcionalidad_adulto_mayor (
-    id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
+    id_instrumento_funcionalidad_adulto_mayor INT PRIMARY KEY,
     cuidar_aspecto_fisico VARCHAR(10),
     realizar_tareas_caseras VARCHAR(10),
     caminar VARCHAR(10),
@@ -539,8 +607,8 @@ CREATE TABLE instrumento_funcionalidad_adulto_mayor (
 );
 
 CREATE TABLE instrumento_longevidad_adulto_mayor (
-    id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
-    parientes_longevos VARCHAR(5),
+    id_instrumento_longevidad_adulto_mayor INT PRIMARY KEY,
+    parientes_longevos BIT,
     edad_madre_padre INT,
     edad_abuelo_abuela INT,
     edad_tio_tia INT,
@@ -548,7 +616,7 @@ CREATE TABLE instrumento_longevidad_adulto_mayor (
 );
 
 CREATE TABLE ficha_psicologia_adulto_mayor (
-    id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
+    id_ficha_psicologia_adulto_mayor INT PRIMARY KEY,
     siente_deprimido VARCHAR(15),
     siente_desesperado VARCHAR(15),
     olvida_dia_que_se encuentra VARCHAR(15),
@@ -567,17 +635,17 @@ CREATE TABLE instrumento_aspecto_social_adulto_mayor (
     id_instrumento_aspecto_social_adulto_mayor INT PRIMARY KEY,
     personas_viven INT,
     con_quien_vive VARCHAR(60),
-    tuvo_hijos VARCHAR(5),
+    tuvo_hijos BIT,
     cuantos_hijos INT,
     rol_nucleo_familiar VARCHAR(40),
     actividades_que_participa VARCHAR(15),
     otras_actividades VARCHAR(40),
-    participa_en_decisiones VARCHAR(5),
+    participa_en_decisiones BIT,
     como_participa VARCHAR(10),
     mencione_participacion VARCHAR(20),
     que_aportes_recibe VARCHAR(30),
     otros_aportes VARCHAR(30),
-    esta_satisfecho VARCHAR(5),
+    esta_satisfecho BIT,
     por_que_satisfecho VARCHAR(40),
     comunicacion_con_quien_vive VARCHAR(15),
     por_que_comunica VARCHAR(40),
@@ -594,7 +662,7 @@ CREATE TABLE instrumento_aspecto_social_adulto_mayor (
     otros_familiares VARCHAR (20),
     vecinos VARCHAR (20),
     amigos_no_vecinos VARCHAR (20),
-    participa_en_grupos VARCHAR(5),
+    participa_en_grupos BIT,
     cuales_grupos VARCHAR(40),
     con_que_frecuencia VARCHAR(15),
     nunca_explique_razones TEXT,
@@ -602,9 +670,9 @@ CREATE TABLE instrumento_aspecto_social_adulto_mayor (
 );
 
 CREATE TABLE instrumento_actividad_ocio_adulto_mayor (
-    id_ficha_datos_familiar_acudiente_adulto_mayor INT PRIMARY KEY,
+    id_instrumento_actividad_ocio_adulto_mayor INT PRIMARY KEY,
     ntrabajado_durante_su_vida VARCHAR(100),
-    labora_actualmente VARCHAR(5),
+    labora_actualmente BIT,
     cual_actividad VARCHAR(50),
     leer VARCHAR(20),
     visitar_amigos VARCHAR(20),
@@ -625,6 +693,7 @@ CREATE TABLE instrumento_actividad_ocio_adulto_mayor (
 );
 
 CREATE TABLE datos_funcionario (
+     id_datos_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
@@ -632,17 +701,31 @@ CREATE TABLE datos_funcionario (
 );
 
 CREATE TABLE visitas_programa (
-    id_visitas_progama INT PRIMARY KEY,
+    id_visitas_programa INT PRIMARY KEY,
     fecha_visita DATE,
     solicitante VARCHAR(60),
     datos_visita VARCHAR(60),
     numero_identificacion VARCHAR(15),
 );
 
-CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
-    id_ficha_progama INT PRIMARY KEY,
+CREATE TABLE visitas_domiciliarias_informe (
+    id_visitas_domiciliarias_informe INT PRIMARY KEY,
+    fecha_visita DATE,
+    solicitante VARCHAR(20),
+    datos_visita VARCHAR(20),
+    numero_identificacion VARCHAR(15),
+    );
+
+CREATE TABLE visitas_datos_adulto_mayor (
+    id_visitas_datos_adulto_mayor INT PRIMARY KEY,
     nombre_completo VARCHAR(120),
     edad INT,
+    numero_identificacion VARCHAR(15),
+    );
+
+
+CREATE TABLE visitas_datos_atiende_visita (
+     id_visitas_datos_atiende_visita INT PRIMARY KEY,
     nombres_atiende_visita VARCHAR(20),
     tipo_numero_documento VARCHAR(20),
     fecha_nacimiento DATE,
@@ -651,11 +734,21 @@ CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
     telefono VARCHAR(15),
     objetivo TEXT,
     desarrollo TEXT,
+    numero_identificacion VARCHAR(15),
+    );
+CREATE TABLE visitas_aspectos_economicos (
+     id_visitas_aspectos_economicos INT PRIMARY KEY,
     tipo_vivienda VARCHAR(15),
-    tenencia_vivienda VARCHAR(5),
+    tenencia_vivienda BIT,
     estrato INT,
     ubicacion VARCHAR(10),
     tiempo_permanencia_vivienda VARCHAR(20),
+acueducto BIT,
+energia BIT,
+manejo_basuras BIT,
+gas_domiciliario BIT,
+television BIT,
+internet BIT,
     numero_habitaciones INT,
     numero_residentes INT,
     otros_espacios VARCHAR(20),
@@ -663,11 +756,20 @@ CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
     apropiacion_recursos TEXT,
     observaciones_adicionales TEXT,
     concepto TEXT,
+    numero_identificacion VARCHAR(15),
+    );
+
+CREATE TABLE datos_persona_realizo_evaluacion (
+     id_datos_persona_realizo_evaluacion INT PRIMARY KEY,
     nombre_encuestado VARCHAR(20),
     numero_identificacion VARCHAR(15),
     residencia_encuestado VARCHAR(30),
     edad_encuestado INT,
     telefono_encuestado VARCHAR(15),
+    );
+
+CREATE TABLE descripcion_actividad (
+     id_descripcion_actividad INT PRIMARY KEY,
     fecha_inicio_proceso DATE,
     profesional_encargado VARCHAR(60),
     observaciones TEXT,
@@ -675,8 +777,10 @@ CREATE TABLE instrumento_informe_valoracion_adulto_mayor (
 );
 
 CREATE TABLE ficha_funcionario (
+     id_ficha_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
     numero_identificacion VARCHAR(15),
+    
 );
