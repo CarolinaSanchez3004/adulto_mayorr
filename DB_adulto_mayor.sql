@@ -74,18 +74,15 @@ CREATE TABLE ficha_funcionario (
     foreign key (id_ficha_progama) references ficha_progama(id_ficha_progama)
 );
 
-
-
-
 CREATE TABLE historia_programa (
     id_historia_programa INT PRIMARY KEY,
-    fecha_apertura DATE numero_identificacion VARCHAR(15),
+    fecha_apertura DATE
 );
 
 CREATE TABLE historia_datos_adulto_mayor (
     id_historia_datos_adulto_mayor INT PRIMARY KEY,
     nombres_apellidos VARCHAR(120),
-    fecha_nacimiento DATE,
+    fecha_nacimiento VARCHAR(100),
     direccion_residencial VARCHAR(60),
     telefono VARCHAR(15),
     numero_identificacion VARCHAR(15),
@@ -101,53 +98,107 @@ CREATE TABLE historia_datos_adulto_mayor (
     consume_alcohol BIT,
     hace_cuanto_consume_alcohol VARCHAR(20),
     fumador BIT,
-    hace_cuanto_fuma BIT,
+    hace_cuanto_fuma VARCHAR(50),
     consume_drogas BIT,
     hace_cuanto_consume_drogas VARCHAR(20),
     tipo_droga VARCHAR(20),
     nombre_acudiente VARCHAR(120),
     parentesco_acudiente VARCHAR(20),
     direccion_acudiente VARCHAR(60),
-    telefono_acudiente VARCHAR(15)
+    telefono_acudiente VARCHAR(15),
+    id_historia_programa INT,
+    foreign key (id_historia_programa) references historia_programa(id_historia_programa)
 );
 
-CREATE TABLE valoracion_fisica (
+CREATE TABLE valoracion_fisica(
     id_valoracion_fisica INT PRIMARY KEY,
-    cataratas VARCHAR (5),
-    pterigios VARCHAR (5),
-    lentes VARCHAR (5),
-    parpados VARCHAR (5),
-    dentadura VARCHAR (5),
-    protesis VARCHAR (5),
-    protesis_total VARCHAR (5),
-    protesis_parcial VARCHAR (5),
-    dientes_naturales VARCHAR (5),
-    leve VARCHAR (5),
-    moderada VARCHAR (5),
-    total VARCHAR (5),
-    alergias VARCHAR (5),
-    tipo_alergias VARCHAR (5),
-    resequedad VARCHAR (5),
-    lesiones VARCHAR (5),
-    alteraciones_unas VARCHAR (5),
-    hongos VARCHAR (5),
-    cambio_color VARCHAR (5),
-    numero_identificacion VARCHAR(15),
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
-CREATE TABLE sistema_musculo_esqueletico (
+CREATE TABLE valoracion_fisica_ojos (
+    id_valoracion_fisica_ojos INT PRIMARY KEY,
+    cataratas BIT,
+    pterigios BIT,
+    lentes BIT,
+    parpados BIT,
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE valoracion_fisica_boca (
+    id_valoracion_fisica_boca INT PRIMARY KEY,
+    dentadura BIT,
+    protesis BIT,
+    protesis_total BIT,
+    protesis_parcial BIT,
+    dientes_naturales BIT,
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE valoracion_fisica_oidos (
+    id_valoracion_fisica_oidos INT PRIMARY KEY,
+    deficiencia VARCHAR(10),
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE valoracion_fisica_piel(
+    id_valoracion_fisica_piel INT PRIMARY KEY,
+    alergias BIT,
+    tipo_alergias BIT,
+    resequedad BIT,
+    lesiones BIT,
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE valoracion_fisica_ugnas(
+    id_valoracion_fisica_piel INT PRIMARY KEY,
+    alteraciones_unas BIT,
+    hongos BIT,
+    cambio_color BIT,
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE sistema_musculo_esqueletico(
     id_sistema_musculo_esqueletico INT PRIMARY KEY,
     disminucion_muscular VARCHAR(20),
     paralisis_algun_lado_del_cuerpo BIT,
-    numero_identificacion VARCHAR(15),
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE antrotometria(
+    id_antrotometria INT PRIMARY KEY,
+    fecha DATE,
+    edad int,
+    peso FLOAT,
+    talla FLOAT,
+    pe VARCHAR(20),
+    te VARCHAR(20),
+    imc FLOAT,
+    analis TEXT,
+    te2 VARCHAR(20),
+    id_valoracion_fisica INT,
+    foreign key (id_valoracion_fisica) references valoracion_fisica(id_valoracion_fisica)
+);
+
+CREATE TABLE valoracion_psicologica (
+    id_valoracion_psicologica INT PRIMARY KEY,
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
 CREATE TABLE area_personal (
     id_area_personal INT PRIMARY KEY,
-    apariencia_fisica,
-    presentacion_personal VARCHAR(20),
-    actitud_entrevista VARCHAR(20),
-    numero_identificacion VARCHAR(15),
+    apariencia_fisica VARCHAR (100),
+    presentacion_personal VARCHAR (100),
+    actitud_entrevista VARCHAR (100),
+    id_valoracion_psicologica INT,
+    foreign key (id_valoracion_psicologica) references valoracion_psicologica(id_valoracion_psicologica)
 );
 
 CREATE TABLE area_cognitiva (
@@ -159,18 +210,32 @@ CREATE TABLE area_cognitiva (
     lenguaje_hablado BIT,
     curso_pensamiento BIT,
     razonamiento BIT,
-    numero_identificacion VARCHAR(15),
+    id_valoracion_psicologica INT,
+    foreign key (id_valoracion_psicologica) references valoracion_psicologica(id_valoracion_psicologica)
 );
 
 CREATE TABLE area_emocional (
     id_area_emocional INT PRIMARY KEY,
+    angustia BIT,
+    llanto BIT,
     manifiesta_no_institucion BIT,
     ideas_suicidas BIT,
     manifiesta_agresividad BIT,
     observa_tranquilo BIT,
     proyecto_vida BIT,
     espera_muerte BIT,
-    numero_identificacion VARCHAR(15),
+    id_valoracion_psicologica INT,
+    foreign key (id_valoracion_psicologica) references valoracion_psicologica(id_valoracion_psicologica)
+);
+
+CREATE TABLE area_sociofamiliar (
+    id_area_emocional INT PRIMARY KEY,
+    nombre VARCHAR(120),
+    parentesco VARCHAR(60),
+    direccion VARCHAR(100),
+    telefono VARCHAR(15),
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
 CREATE TABLE sistema_relaciones (
@@ -180,7 +245,8 @@ CREATE TABLE sistema_relaciones (
     maneja_relaciones BIT,
     manifiesta_preocupaciones BIT,
     facilidad_comunicarse BIT,
-    numero_identificacion VARCHAR(15),
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
 CREATE TABLE intereses (
@@ -201,13 +267,15 @@ CREATE TABLE intereses (
     deportivas BIT,
     liderazgo BIT,
     humanisticas BIT,
-    numero_identificacion VARCHAR(15),
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
 CREATE TABLE intervencion_gerontologica (
     id_intervencion_gerontologica INT PRIMARY KEY,
-    intervencion_gerontologica TEXT (100),
-    numero_identificacion VARCHAR(15),
+    intervencion_gerontologica TEXT,
+    id_historia_datos_adulto_mayor INT,
+    foreign key (id_historia_datos_adulto_mayor) references historia_datos_adulto_mayor(id_historia_datos_adulto_mayor)
 );
 
 CREATE TABLE historia_funcionario (
@@ -216,8 +284,20 @@ CREATE TABLE historia_funcionario (
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
-    aprobada_por VARCHAR(20)
+    aprobada_por VARCHAR(20),
+    id_historia_programa INT,
+    foreign key (id_historia_programa) references historia_programa(id_historia_programa)
 );
+
+
+
+
+
+
+
+
+
+
 
 CREATE TABLE escala_lawton_brody(
     id_escala_lawton_brody INT PRIMARY KEY,

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
 
 	<title>Historia Gerontológica</title>
-    <link rel="stylesheet" type="text/css" href="css/css.css">
-    <link rel="icon" href="img/html.png">
-    <meta charset="utf-8">
-    <font face= "Time new roman">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="icon" href="img/html.png">
+	<meta charset="utf-8">
+	<font face="Time new roman">
 
 
 </head>
@@ -15,660 +16,785 @@
 
 <body>
 
-			<ul class="menu">
-
-
-	<li class="current"><a href="index.html">Programa Gerontológico Adulto Mayor</a></li>
-	<li><a href="Ficha.html">Ficha De Matricula</a></li>
-	<li><a href="Historia.html">Historia Gerontológica</a></li>
-	<li ><a href="Valoraciones.html">Valoraciones Biopsicosociales</a></li>
-    <li ><a href="instrumento.html">Instrumento</a></li>
-	<li><a href="visitas.html">Visitas Domiciliarias</a></li>
-			
-	
-   <div>
-        <img src="img/alcaldias.png" alt="Logo del encabezado" width="1"/>
-   </div>
-            </ul>
-         
- <!-- INICIO--> 
-
-
- <form action="" class="formulario" id= "formulario">
- 	<p><h1>HISTORIA GERONTOLÓGICA </h1>
- 		<br>
- 	<h1>CENTRO VIDA GERONTOLÓGICO "BELLO ATARDECER" </h1>
- 	<h1>MUNICIPIO DE SONSÓN </h1>
-
-Fecha de apertura: <input type="text" name="fecha_apertura"><br>
-
-<h2> DATOS DE IDENTIFICACIÓN </h2>
-
-<br>
-Nombres y apellidos: 
-<input type="text" name="nombres_apellidos"><br>	
-        
-Lugar y fecha de nacimiento:
-        	<input type="text" name="fecha_nacimiento"><br>
-Dirección:
-        <input type="text" name="direccion_residencial"><br> 	             
-
-Teléfono: 
-
-        	<input type="text" name="telefono"><br>  	
-Cédula: <input type="text" name="numero_identificacion"><br>                         
-Edad:<input type="text" name="edad"><br>	
-
-Sexo: <br>
-<select name="sexo" style="width: 400px";>
-	<option value="seleccione">--Seleccione--</option>
-	<option value="masculino">Masculino</option>
-	<option value="femenino">Femenino</option>
-	<option value="lgtbi">LGTBI</option>
-	<option value="prefiero_no_decirlo">Prefiero no decirlo</option>
-</select>
-
-<br>
-Estado civil: <input type="text" name="estado_civil"><br>  	
-
-Grado de escolaridad:<input type="text" name="grado_escolaridad"><br>	Grupo del Sisben: <input type="text" name="grupo_sisben"><br>
-
-EPS: <input type="text" name="eps"><br> 	
-Se encuentra en: 
-<select name="regimen_actual" style="width: 400px";>
-	<option value="seleccione">--Seleccione--</option>
-	<option value="subsidiado">Subsidiado</option>
-	<option value="contributivo">Contributivo</option>
-</select>
-<br>
-
-Fecha de ingreso al programa:<input type="text" name="fecha_ingreso"><br>   	  	
-
-Motivo de ingreso:
-<select name="motivo_ingreso" style="width: 400px"; >
-	<option value="seleccione">--Seleccione--</option>
-	<option value="voluntario">Voluntario</option>
-	<option value="soledad">Soledad</option>
-	<option value="abandono">Abandono familiar</option>
-	<option value="rechazo">Rechazo a la familia</option>
-	<option value="recomendaciones">Recomendaciones del profesional</option>
-	<option value="otras">Otras</option>
-</select>
-
-<br>
-
-
-¿Consumo de alcohol?:
-<select name="consume_alcohol" style="width: 400px";>
-	<option value="seleccione">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>
-¿Hace cuánto?: <input type="text" name="hace_cuanto_consume_alcohol"><br> 	
-
-¿Fumador?:
-<select name="fumador" style="width: 400px";>
-	<option value="seleccione">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>
-
-¿Hace cuánto?: <input type="text" name="hace_cuanto_fuma"><br>  	
-
-¿Consume drogas psicoactivas?:
-<select name="consume_drogas" style="width: 400px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>
-¿Hace cuánto?: <input type="text" name="hace_cuanto_consume_drogas"><br> 	Tipo de droga: <input type="text" name="tipo_droga"><br> 
-
-Acudiente: <input type="text" name="nombre_acudiente"><br>   	
-
-Parentesco: <input type="text" name="parentesco_acudiente"><br> Dirección:<input type="text" name="direccion_acudiente"><br> 	Teléfono:<input type="text" name="telefono_acudiente"><br> 	
-
-<h2>VALORACIÓN FISICA</h2>
-
-
-
-<br>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<h2>Ojos:<br> </h2>
-<br>
-
-<label><select name="cataratas" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Cataratas<br> </label>
-<br>
-<label><select name="pterigios" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Pterigios<br> </label>
-<br>
-<label><select name="lentes" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Lentes<br> </label>
-<br>
-<label><select name="parpados" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Parpados caídos<br> </label>
-
-
-        <br>
-         <br>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-       
-<h2>Boca:<br>  </h2>
-<br>
-<label><select name="dentadura" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Sin dentadura<br> </label>
-
-<br>
-
-<label><select name="protesis" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Usa Prótesis<br> </label>
-<br>
-
-<label><select name="protesis_total" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Prótesis total<br> </label>
-<br>
-<label><select name="protesis_parcial" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Prótesis parcial<br> </label>
-<br>
-<label><select name="dientes_naturales" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Dientes naturales<br> </label>
-<br>
-
-
- <br>
-   <br>
- 
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-<h2>Oidos: <br> </h2>
-<br>
-<h2>Deficiencia para percibir sonidos</h2>
-<br>
-
-<br>
-<label><select name="leve" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Leve<br> </label>
-
-<br>
-<label><select name="moderada" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Moderada<br> </label>
-
-<br>
-<label><select name="total" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Total<br> </label>
-<br>
-
- <br>
-<br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<h2>Piel: </h2>
-<br>
-<label><select name="alergias" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Alergias<br> </label>
-<br>
-<label><select name="tipo_alergias" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Tipo de alergias<br> </label>
-<br>
-<label><select name="resequedad" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Resequedad<br> </label>
-<br>
-<label><select name="lesiones" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Lesiones<br> </label>
-<br>
-
-
-<br>    
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<h2>Uñas: </h2>
-<br>
-<label><select name="alteraciones_unas" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Alteraciones en las uñas<br> </label>
-<br>
-<label><select name="hongos" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Hongos<br> </label>
-<br>
-<label><select name="cambio_color" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Cambio de color<br> </label>
-<br>
-<br>
-
-<h2>Sistema músculo esquelético</h2> 
-<br>
-
-Disminución Muscular significativo:<br> <input type="text" name="disminucion_muscular"><br>	
-
-Parálisis de algún lado del cuerpo: <br><input type="text" name="paralisis_algun_lado_del_cuerpo"><br>	
-
-<h2>ANTROPOMETRÍA</h2>
-<br>
-<br>
-<TABLE BORDER="1"width="103%" height="100">
-<tr><td><b>FECHA</b></td><td><b>EDAD</b></td> <td><b>PESO</b></td> <td><b>TALLA</b></td> <td><b>P/E</b></td> <td><b>T/E</b></td><td><b>IMC</b></td> <td><b>ANALISIS</b></td> <td><b>T/E</b></td></tr>
-
-<tr><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"><br></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td></tr>
-
-<tr><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"><br></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"><br></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"><br></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 90px; height: 30px" size="32" name="apariencia"></td></tr>
-
-
-</TABLE>
-								
-
-<br>
-<p><h2>VALORACIÓN PSICOLÓGICA</h2></p>
-<br>
-
-<h2>Área personal</h2>
-
-Apariencia física: <input type="text" name="apariencia_fisica"><br>
-
-Presentación Personal: <input type="text" name="presentacion_personal"><br>  	
-
-Actitud durante la entrevista: <input type="text" name="actitud_entrevista"><br>
-
-<h2>Área cognitiva</h2>
-<br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-<h2>Presenta dificultad en:</h2>
-
-<br><label><select name="memoria_presente" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Memoria presente<br> </label>
-<br>
-<label><select name="memoria_pasada" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Memoria pasada<br> </label>
-<br>
-<label><select name="atencion" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Atención<br> </label>
-<br>
-<label><select name="lectoescritura" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Lectoescritura<br> </label>
-<br>
-<label><select name="lenguaje_hablado" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Lenguaje hablado<br> </label>
-<br>
-<label><select name="curso_pensamiento" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Curso del pensamiento<br> </label>
-<br>
-<label><select name="razonamiento" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Razonamiento<br> </label>
-<br>
-
- <br>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<h2>Área emocional y comportamiento durante la evaluación: </h2>
-<br>
-<label><select name="muestra_angustia" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Muestra angustia<br> </label>
-<br>
-<label><select name="presenta_llanto" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Presenta llanto<br> </label>
-<br>
-<label><select name="manifiesta_no_institucion" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Manifiesta no querer estar en la institución <br> </label>
-<br>
-<label><select name="ideas_suicidas" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Aparecen ideas suicidas<br> </label>
-<br>
-<label><select name="manifiesta_agresividad" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Manifiesta agresividad<br> </label>
-<br>
-<label><select name="observa_tranquilo" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Se observa tranquilo<br> </label>
-<br>
-<label><select name="proyecto_vida" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Tiene proyecto de vida<br> </label>
-<br>
-<label><select name="espera_muerte" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Solo espera la muerte <br> </label>
-
- <br>
- <br>
-<h2>AREA SOCIOFAMILIAR<h2>
-
-<TABLE BORDER="1"width="103%" height="100">
-<tr><td><b>NOMBRE</b></td> <td><b>PARENTESCO</b></td> <td><b>DIRECCION</b></td> <td><b>TELEFONO</b></td></tr>
-
-
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-<tr><td><input id="text"style="width: 300px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td><td><input id="text"style="width: 180px; height: 30px" size="32" name="apariencia"></td></tr>
-
-
-
-
-
-</TABLE>		
-<br>		
-
-<p><h2>Sistema de relaciones</h2></p>
-
-Hace amigos fácilmente: 
-<select name="hace_amigos" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>
-
-Pertenece a grupos: 
-<select name="pertenece_grupos" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>	
-<br>
-Maneja relaciones:
-<select name="maneja_relaciones" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Cordiales</option>
-	<option value="no">Conflictivas</option>
-</select>
-<br>
-Manifiesta fácilmente a sus compañeros sus preocupaciones: 
-<select name="manifiesta_preocupaciones" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>	
-
-Tiene facilidad para comunicarse: 
-<select name="facilidad_comunicarse" style="width: 400px";>
-	<option value="si">--Seleccione--</option>
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>
-<br>
-<br>
-<br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-<p><h2>AREA OCUPACIONAL</h2></p>
-<br>
-
-<h2>Valoración e intereses</h2>
-<br>
-
-<h2>Intereses (aquello que llama la atención y crea expectativas en la persona):</h2>
-<br>
-<label><select name="religiosos" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Religioso<br> </label>
-<br>
-<label><select name="cultural" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Artística cultural<br> </label>
-<br>
-<label><select name="intelectual_cientifico" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Intelectual y/o científico<br> </label>
-<br>
-<label><select name="manuales" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Manuales<br> </label>
-<br>
-<label><select name="actitudes" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Actitudes (idoneidad natural o adquirida para algo)<br> </label>
-<br>
-<label><select name="dibujo" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Dibujo<br> </label>
-<br>
-<label><select name="pintar" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Pintar<br> </label>
-<br>
-<label><select name="danzar" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Danzar<br> </label>
-<br>
-<label><select name="bailar" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Bailar<br> </label>
-<br>
-<label><select name="teatro" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Teatro<br> </label>
-<br>
-<label><select name="poesia" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Poesía<br> </label>
-<br>
-
-<label><select name="canto" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Canto<br> </label>
-<br>
-<label><select name="escritura" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Escritura<br> </label>
-<br>
-<label><select name="deportivas" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Deportivas<br> </label>
-<br>
-<label><select name="liderazgo" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Liderazgo<br> </label>
-<br>
-<label><select name="humanisticas" style="width: 100px";>
-	 
-	<option value="si">Si</option>
-	<option value="no">No</option>
-</select>Humanísticas<br> </label>
-
- <br>
-<br>
-
-<h2>INTERVENCIÓN GERONTOLÓGICA</h2>
-
-<input id="text"style="width: 650px; height: 300px" size="32" name="intervención_gerontologica"><br>
-
-
-
-<h2>Diligenciada por:</h2> 	
-
-Nombre: <input type="text" name="nombre_funcionario"><br>
-CC: <input type="text" name="numero_identificacion_funcionario"><br>
-
-Cargo: <input type="text" name="cargo"><br> 
-
-Registro profesional: <input type="text" name="registro_profesional"><br> 
-
-Aprobada por:  <input type="text" name="aprobada_por"><br>	
-
-<h2>ANEXOS</h2>
-
-
-<li>Valoración Biopsicosocial </li>
-<li>Diagnostico medico </li>
-<li>Anotaciones de enfermería </li>
-<li>Seguimiento gerontológico </li>
-<li>Evaluación Nutricional</li>
-<li>Llamados de atención</li>
-<li>Historial </li>
-
-
-
-<input type="submit" name="Guardar">
-<input type="reset" name="Limpiar">
-
-<footer style="height: 100%">
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-6 text-left">
-           
-
-    
-   <div style="text-align: center;">
-        <img src="img/alcaldias.png" alt="Logo del encabezado" width="500"/>
-
-    </div>
-
-</nav>
-</div>
-</div>
-</div>
-</footer>
-
-</form>
+	<ul class="menu">
+
+
+		<li class="current"><a href="index.html">Programa Gerontológico Adulto Mayor</a></li>
+		<li><a href="Ficha.html">Ficha De Matricula</a></li>
+		<li><a href="Historia.html">Historia Gerontológica</a></li>
+		<li><a href="Valoraciones.html">Valoraciones Biopsicosociales</a></li>
+		<li><a href="instrumento.html">Instrumento</a></li>
+		<li><a href="visitas.html">Visitas Domiciliarias</a></li>
+
+
+		<div>
+			<img src="img/alcaldias.png" alt="Logo del encabezado" width="1" />
+		</div>
+	</ul>
+
+	<!-- INICIO-->
+
+
+	<form action="" class="formulario" id="formulario">
+		<p>
+			<h1>HISTORIA GERONTOLÓGICA </h1>
+			<br>
+			<h1>CENTRO VIDA GERONTOLÓGICO "BELLO ATARDECER" </h1>
+			<h1>MUNICIPIO DE SONSÓN </h1>
+
+			Fecha de apertura: <input type="text" name="fecha_apertura"><br>
+
+			<h2> DATOS DE IDENTIFICACIÓN </h2>
+
+			<br>
+			Nombres y apellidos:
+			<input type="text" name="nombres_apellidos"><br>
+
+			Lugar y fecha de nacimiento:
+			<input type="text" name="fecha_nacimiento"><br>
+			Dirección:
+			<input type="text" name="direccion_residencial"><br>
+
+			Teléfono:
+
+			<input type="text" name="telefono"><br>
+			Cédula: <input type="text" name="numero_identificacion"><br>
+			Edad:<input type="text" name="edad"><br>
+
+			Sexo: <br>
+			<select name="sexo" style="width: 400px" ;>
+				<option value="seleccione">--Seleccione--</option>
+				<option value="masculino">Masculino</option>
+				<option value="femenino">Femenino</option>
+				<option value="lgtbi">LGTBI</option>
+				<option value="prefiero_no_decirlo">Prefiero no decirlo</option>
+			</select>
+
+			<br>
+			Estado civil: <input type="text" name="estado_civil"><br>
+
+			Grado de escolaridad:<input type="text" name="grado_escolaridad"><br> Grupo del Sisben: <input type="text"
+				name="grupo_sisben"><br>
+
+			EPS: <input type="text" name="eps"><br>
+			Se encuentra en:
+			<select name="regimen_actual" style="width: 400px" ;>
+				<option value="seleccione">--Seleccione--</option>
+				<option value="subsidiado">Subsidiado</option>
+				<option value="contributivo">Contributivo</option>
+			</select>
+			<br>
+
+			Fecha de ingreso al programa:<input type="text" name="fecha_ingreso"><br>
+
+			Motivo de ingreso:
+			<select name="motivo_ingreso" style="width: 400px" ;>
+				<option value="seleccione">--Seleccione--</option>
+				<option value="voluntario">Voluntario</option>
+				<option value="soledad">Soledad</option>
+				<option value="abandono">Abandono familiar</option>
+				<option value="rechazo">Rechazo a la familia</option>
+				<option value="recomendaciones">Recomendaciones del profesional</option>
+				<option value="otras">Otras</option>
+			</select>
+
+			<br>
+
+
+			¿Consumo de alcohol?:
+			<select name="consume_alcohol" style="width: 400px" ;>
+				<option value="seleccione">--Seleccione--</option>
+				<option value="si">Si</option>
+				<option value="no">No</option>
+			</select>
+			<br>
+			¿Hace cuánto?: <input type="text" name="hace_cuanto_consume_alcohol"><br>
+
+			¿Fumador?:
+			<select name="fumador" style="width: 400px" ;>
+				<option value="seleccione">--Seleccione--</option>
+				<option value="si">Si</option>
+				<option value="no">No</option>
+			</select>
+			<br>
+
+			¿Hace cuánto?: <input type="text" name="hace_cuanto_fuma"><br>
+
+			¿Consume drogas psicoactivas?:
+			<select name="consume_drogas" style="width: 400px" ;>
+
+				<option value="si">Si</option>
+				<option value="no">No</option>
+			</select>
+			<br>
+			¿Hace cuánto?: <input type="text" name="hace_cuanto_consume_drogas"><br> Tipo de droga: <input type="text"
+				name="tipo_droga"><br>
+
+			Acudiente: <input type="text" name="nombre_acudiente"><br>
+
+			Parentesco: <input type="text" name="parentesco_acudiente"><br> Dirección:<input type="text"
+				name="direccion_acudiente"><br> Teléfono:<input type="text" name="telefono_acudiente"><br>
+
+			<h2>VALORACIÓN FISICA</h2>
+
+
+
+			<br>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+			<h2>Ojos:<br> </h2>
+			<br>
+
+			<label><select name="cataratas" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Cataratas<br> </label>
+			<br>
+			<label><select name="pterigios" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Pterigios<br> </label>
+			<br>
+			<label><select name="lentes" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Lentes<br> </label>
+			<br>
+			<label><select name="parpados" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Parpados caídos<br> </label>
+
+
+			<br>
+			<br>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+			<h2>Boca:<br> </h2>
+			<br>
+			<label><select name="dentadura" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Sin dentadura<br> </label>
+
+			<br>
+
+			<label><select name="protesis" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Usa Prótesis<br> </label>
+			<br>
+
+			<label><select name="protesis_total" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Prótesis total<br> </label>
+			<br>
+			<label><select name="protesis_parcial" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Prótesis parcial<br> </label>
+			<br>
+			<label><select name="dientes_naturales" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Dientes naturales<br> </label>
+			<br>
+
+
+			<br>
+			<br>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+			<h2>Oidos: <br> </h2>
+			<br>
+
+
+
+			<label><select name="oidos" style="width: 100px" ;>
+
+					<option value="Leve">Leve</option>
+					<option value="Moderada">Moderada</option>
+					<option value="Total">Total</option>
+				</select>Deficiencia para percibir sonidos<br> </label>
+
+
+
+			<br>
+			<br>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+			<h2>Piel: </h2>
+			<br>
+			<label><select name="alergias" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Alergias<br> </label>
+			<br>
+			<label><select name="tipo_alergias" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Tipo de alergias<br> </label>
+			<br>
+			<label><select name="resequedad" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Resequedad<br> </label>
+			<br>
+			<label><select name="lesiones" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Lesiones<br> </label>
+			<br>
+
+
+			<br>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+			<h2>Uñas: </h2>
+			<br>
+			<label><select name="alteraciones_unas" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Alteraciones en las uñas<br> </label>
+			<br>
+			<label><select name="hongos" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Hongos<br> </label>
+			<br>
+			<label><select name="cambio_color" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Cambio de color<br> </label>
+			<br>
+			<br>
+
+			<h2>Sistema músculo esquelético</h2>
+			<br>
+
+			Disminución Muscular significativo:<br> <input type="text" name="disminucion_muscular"><br>
+
+			Parálisis de algún lado del cuerpo: <br><input type="text" name="paralisis_algun_lado_del_cuerpo"><br>
+
+			<h2>ANTROPOMETRÍA</h2>
+			<br>
+			<br>
+			<TABLE BORDER="1" width="103%" height="100">
+				<tr>
+					<td><b>FECHA</b></td>
+					<td><b>EDAD</b></td>
+					<td><b>PESO</b></td>
+					<td><b>TALLA</b></td>
+					<td><b>P/E</b></td>
+					<td><b>T/E</b></td>
+					<td><b>IMC</b></td>
+					<td><b>ANALISIS</b></td>
+					<td><b>T/E</b></td>
+				</tr>
+
+				<tr>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"><br></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+				</tr>
+
+				<tr>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"><br></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+				</tr>
+				<tr>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"><br></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+				</tr>
+				<tr>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"><br></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+					<td><input id="text" style="width: 90px; height: 30px" size="32" name="apariencia"></td>
+				</tr>
+
+
+			</TABLE>
+
+
+			<br>
+			<p>
+				<h2>VALORACIÓN PSICOLÓGICA</h2>
+			</p>
+			<br>
+
+			<h2>Área personal</h2>
+
+			Apariencia física: <input type="text" name="apariencia_fisica"><br>
+
+			Presentación Personal: <input type="text" name="presentacion_personal"><br>
+
+			Actitud durante la entrevista: <input type="text" name="actitud_entrevista"><br>
+
+			<h2>Área cognitiva</h2>
+			<br>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+			<h2>Presenta dificultad en:</h2>
+
+			<br><label><select name="memoria_presente" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Memoria presente<br> </label>
+			<br>
+			<label><select name="memoria_pasada" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Memoria pasada<br> </label>
+			<br>
+			<label><select name="atencion" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Atención<br> </label>
+			<br>
+			<label><select name="lectoescritura" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Lectoescritura<br> </label>
+			<br>
+			<label><select name="lenguaje_hablado" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Lenguaje hablado<br> </label>
+			<br>
+			<label><select name="curso_pensamiento" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Curso del pensamiento<br> </label>
+			<br>
+			<label><select name="razonamiento" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Razonamiento<br> </label>
+			<br>
+
+			<br>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+			<h2>Área emocional y comportamiento durante la evaluación: </h2>
+			<br>
+			<label><select name="muestra_angustia" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Muestra angustia<br> </label>
+			<br>
+			<label><select name="presenta_llanto" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Presenta llanto<br> </label>
+			<br>
+			<label><select name="manifiesta_no_institucion" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Manifiesta no querer estar en la institución <br> </label>
+			<br>
+			<label><select name="ideas_suicidas" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Aparecen ideas suicidas<br> </label>
+			<br>
+			<label><select name="manifiesta_agresividad" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Manifiesta agresividad<br> </label>
+			<br>
+			<label><select name="observa_tranquilo" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Se observa tranquilo<br> </label>
+			<br>
+			<label><select name="proyecto_vida" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Tiene proyecto de vida<br> </label>
+			<br>
+			<label><select name="espera_muerte" style="width: 100px" ;>
+
+					<option value="si">Si</option>
+					<option value="no">No</option>
+				</select>Solo espera la muerte <br> </label>
+
+			<br>
+			<br>
+			<h2>AREA SOCIOFAMILIAR<h2>
+
+					<TABLE BORDER="1" width="103%" height="100">
+						<tr>
+							<td><b>NOMBRE</b></td>
+							<td><b>PARENTESCO</b></td>
+							<td><b>DIRECCION</b></td>
+							<td><b>TELEFONO</b></td>
+						</tr>
+
+
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+						<tr>
+							<td><input id="text" style="width: 300px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+							<td><input id="text" style="width: 180px; height: 30px" size="32" name="apariencia">
+							</td>
+						</tr>
+
+
+
+
+
+					</TABLE>
+					<br>
+
+					<p>
+						<h2>Sistema de relaciones</h2>
+					</p>
+
+					Hace amigos fácilmente:
+					<select name="hace_amigos" style="width: 400px" ;>
+						<option value="si">--Seleccione--</option>
+						<option value="si">Si</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+
+					Pertenece a grupos:
+					<select name="pertenece_grupos" style="width: 400px" ;>
+						<option value="si">--Seleccione--</option>
+						<option value="si">Si</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					Maneja relaciones:
+					<select name="maneja_relaciones" style="width: 400px" ;>
+						<option value="si">--Seleccione--</option>
+						<option value="si">Cordiales</option>
+						<option value="no">Conflictivas</option>
+					</select>
+					<br>
+					Manifiesta fácilmente a sus compañeros sus preocupaciones:
+					<select name="manifiesta_preocupaciones" style="width: 400px" ;>
+						<option value="si">--Seleccione--</option>
+						<option value="si">Si</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+
+					Tiene facilidad para comunicarse:
+					<select name="facilidad_comunicarse" style="width: 400px" ;>
+						<option value="si">--Seleccione--</option>
+						<option value="si">Si</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					<br>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+					<p>
+						<h2>AREA OCUPACIONAL</h2>
+					</p>
+					<br>
+
+					<h2>Valoración e intereses</h2>
+					<br>
+
+					<h2>Intereses (aquello que llama la atención y crea expectativas en la persona):</h2>
+					<br>
+					<label><select name="religiosos" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Religioso<br> </label>
+					<br>
+					<label><select name="cultural" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Artística cultural<br> </label>
+					<br>
+					<label><select name="intelectual_cientifico" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Intelectual y/o científico<br> </label>
+					<br>
+					<label><select name="manuales" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Manuales<br> </label>
+					<br>
+					<label><select name="actitudes" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Actitudes (idoneidad natural o adquirida para algo)<br> </label>
+					<br>
+					<label><select name="dibujo" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Dibujo<br> </label>
+					<br>
+					<label><select name="pintar" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Pintar<br> </label>
+					<br>
+					<label><select name="danzar" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Danzar<br> </label>
+					<br>
+					<label><select name="bailar" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Bailar<br> </label>
+					<br>
+					<label><select name="teatro" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Teatro<br> </label>
+					<br>
+					<label><select name="poesia" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Poesía<br> </label>
+					<br>
+
+					<label><select name="canto" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Canto<br> </label>
+					<br>
+					<label><select name="escritura" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Escritura<br> </label>
+					<br>
+					<label><select name="deportivas" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Deportivas<br> </label>
+					<br>
+					<label><select name="liderazgo" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Liderazgo<br> </label>
+					<br>
+					<label><select name="humanisticas" style="width: 100px" ;>
+
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>Humanísticas<br> </label>
+
+					<br>
+					<br>
+
+					<h2>INTERVENCIÓN GERONTOLÓGICA</h2>
+
+					<input id="text" style="width: 650px; height: 300px" size="32"
+						name="intervención_gerontologica"><br>
+
+
+
+					<h2>Diligenciada por:</h2>
+
+					Nombre: <input type="text" name="nombre_funcionario"><br>
+					CC: <input type="text" name="numero_identificacion_funcionario"><br>
+
+					Cargo: <input type="text" name="cargo"><br>
+
+					Registro profesional: <input type="text" name="registro_profesional"><br>
+
+					Aprobada por: <input type="text" name="aprobada_por"><br>
+
+					<h2>ANEXOS</h2>
+
+
+					<li>Valoración Biopsicosocial </li>
+					<li>Diagnostico medico </li>
+					<li>Anotaciones de enfermería </li>
+					<li>Seguimiento gerontológico </li>
+					<li>Evaluación Nutricional</li>
+					<li>Llamados de atención</li>
+					<li>Historial </li>
+
+
+
+					<input type="submit" name="Guardar">
+					<input type="reset" name="Limpiar">
+
+					<footer style="height: 100%">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-md-6 text-left">
+
+
+
+									<div style="text-align: center;">
+										<img src="img/alcaldias.png" alt="Logo del encabezado" width="500" />
+
+									</div>
+
+									</nav>
+								</div>
+							</div>
+						</div>
+					</footer>
+
+	</form>
 
 </body>
-</html>
 
+</html>
