@@ -289,19 +289,9 @@ CREATE TABLE historia_funcionario (
     foreign key (id_historia_programa) references historia_programa(id_historia_programa)
 );
 
-
-
-
-
-
-
-
-
-
-
 CREATE TABLE escala_lawton_brody(
     id_escala_lawton_brody INT PRIMARY KEY,
-    nombre_usuario VARCHAR (120),
+    nombre_adulto VARCHAR (120),
     zona VARCHAR(10),
     distrito VARCHAR(15),
     modalidad_atencion VARCHAR(15),
@@ -309,8 +299,7 @@ CREATE TABLE escala_lawton_brody(
     edad_anual INT,
     edad_meses INT,
     fecha_aplicacion DATE,
-    aplicado_por VARCHAR(60),
-    numero_identificacion VARCHAR(15),
+    aplicado_por VARCHAR(60)
 );
 
 CREATE TABLE pregunta_uno_lawton (
@@ -318,8 +307,9 @@ CREATE TABLE pregunta_uno_lawton (
     capacidad_telefono BIT,
     marcar_numeros BIT,
     contestar_telefono BIT,
-    total_uno VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_uno INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_dos_lawton (
@@ -328,8 +318,9 @@ CREATE TABLE pregunta_dos_lawton (
     compras_independiente BIT,
     acompanado_compra BIT,
     incapaz_comprar BIT,
-    total_dos VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_dos INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_tres_lawton (
@@ -338,8 +329,9 @@ CREATE TABLE pregunta_tres_lawton (
     adecuadamente_comida BIT,
     sirve_comida BIT,
     necesita_comida BIT,
-    total_tres VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_tres INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_cuatro_lawton (
@@ -349,8 +341,9 @@ CREATE TABLE pregunta_cuatro_lawton (
     nivel_bajo_limpieza BIT,
     ayuda_labores BIT,
     no_labora_casa BIT,
-    total_cuatro VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_cuatro INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_cinco_lawton (
@@ -358,8 +351,9 @@ CREATE TABLE pregunta_cinco_lawton (
     lava_ropa BIT,
     lava_pequenas_prendas BIT,
     lava_otro BIT,
-    total_cinco VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_cinco INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_seis_lawton (
@@ -369,8 +363,9 @@ CREATE TABLE pregunta_seis_lawton (
     transporte_publico BIT,
     utiliza_automovil BIT,
     no_viaja BIT,
-    total_seis VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_seis INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_siete_lawton (
@@ -378,8 +373,9 @@ CREATE TABLE pregunta_siete_lawton (
     medicacion_solo BIT,
     medicacion_previa BIT,
     no_administra_medicacion BIT,
-    total_siete VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_siete INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE pregunta_ocho_lawton (
@@ -387,22 +383,26 @@ CREATE TABLE pregunta_ocho_lawton (
     economicos_solo BIT,
     compras_ayuda BIT,
     economicos_ayuda BIT,
-    total_ocho VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    total_ocho INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE total_lawton_brody (
     id_total_lawton_brody INT PRIMARY KEY,
-    total_todo VARCHAR(20),
-    numero_identificacion VARCHAR(15),
+    total_todo INT,
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
-CREATE TABLE datos_funcionario (
+CREATE TABLE lawton_brody_funcionario (
     id_datos_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
+    id_escala_lawton_brody INT,
+    foreign key (id_escala_lawton_brody) references escala_lawton_brody(id_escala_lawton_brody)
 );
 
 CREATE TABLE escala_mental (
@@ -415,8 +415,7 @@ CREATE TABLE escala_mental (
     edad_anual INT,
     edad_meses INT,
     fecha_aplicacion DATE,
-    aplicado_por VARCHAR(60),
-    numero_identificacion VARCHAR(15),
+    aplicado_por VARCHAR(60)
 );
 
 CREATE TABLE pregunta_uno (
@@ -426,8 +425,9 @@ CREATE TABLE pregunta_uno (
     ano_estamos BIT,
     dia_semana BIT,
     hora_estamos BIT,
-    puntuacion_uno VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_uno INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_dos(
@@ -437,8 +437,9 @@ CREATE TABLE pregunta_dos(
     ano_estamos_dos BIT,
     dia_semana_dos BIT,
     hora_estamos_dos BIT,
-    puntuacion_dos VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_dos INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_tres(
@@ -448,8 +449,9 @@ CREATE TABLE pregunta_tres(
     barrio_actual BIT,
     ciudad_estamos BIT,
     pais_estamos BIT,
-    puntuacion_tres VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_tres INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_cuatro (
@@ -458,8 +460,9 @@ CREATE TABLE pregunta_cuatro (
     papel BIT,
     bicicleta BIT,
     cuchara BIT,
-    puntuacion_cuatro VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_cuatro INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_cinco(
@@ -469,8 +472,9 @@ CREATE TABLE pregunta_cinco(
     tres BIT,
     cuatro BIT,
     cinco BIT,
-    puntuacion_cinco VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_cinco INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_seis(
@@ -478,23 +482,26 @@ CREATE TABLE pregunta_seis(
     papel_uno BIT,
     bicicleta_dos BIT,
     cuchara_tres BIT,
-    puntuacion_seis VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_seis INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_siete(
     id_pregunta_siete INT PRIMARY KEY,
     mostrarle_lapiz BIT,
     mostrarle_reloj BIT,
-    puntuacion_siete VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_siete INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_ocho(
     id_pregunta_ocho INT PRIMARY KEY,
     consigna BIT,
-    puntuacion_ocho VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_ocho INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_nueve(
@@ -502,35 +509,40 @@ CREATE TABLE pregunta_nueve(
     comprension_ejecucion BIT,
     doblar_mitad BIT,
     dejelo_suelo BIT,
-    puntuacion_nueve VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_nueve INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_diez(
     id_pregunta_diezpregunta_diez INT PRIMARY KEY,
     pidale_leer BIT,
-    puntuacion_diez VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_diez INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_once(
     id_pregunta_once INT PRIMARY KEY,
     escriba_frase BIT,
-    puntuacion_once VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_once INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE pregunta_doce(
     id_pregunta_doce INT PRIMARY KEY,
     copie_dibujo BIT,
-    puntuacion_doce VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_doce INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE total_preguntas(
     id_total_preguntas INT PRIMARY KEY,
-    puntuacion_total VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    puntuacion_total INT,
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
 CREATE TABLE datos_funcionario (
@@ -539,7 +551,17 @@ CREATE TABLE datos_funcionario (
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
+    id_escala_mental INT,
+    foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
+
+
+
+
+
+
+
+
 
 CREATE TABLE escala_mental (
     id_escala_mental INT PRIMARY KEY,
