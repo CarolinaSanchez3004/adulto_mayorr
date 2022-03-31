@@ -555,14 +555,6 @@ CREATE TABLE datos_funcionario (
     foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
-
-
-
-
-
-
-
-
 CREATE TABLE escala_mental (
     id_escala_mental INT PRIMARY KEY,
     nombre_usuario VARCHAR (120),
