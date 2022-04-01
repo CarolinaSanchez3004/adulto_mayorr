@@ -555,8 +555,16 @@ CREATE TABLE datos_funcionario (
     foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
-CREATE TABLE escala_mental (
-    id_escala_mental INT PRIMARY KEY,
+
+
+
+
+
+
+ 
+
+CREATE TABLE escala_depresion (
+    id_escala_depresion INT PRIMARY KEY,
     nombre_usuario VARCHAR (120),
     zona VARCHAR(10),
     distrito VARCHAR(15),
@@ -565,8 +573,7 @@ CREATE TABLE escala_mental (
     edad_anual INT,
     edad_meses INT,
     fecha_aplicacion DATE,
-    aplicado_por VARCHAR(60),
-    numero_identificacion VARCHAR(15),
+    aplicado_por VARCHAR(60)
 );
 
 CREATE TABLE preguntas_escala_depresion (
@@ -587,7 +594,8 @@ CREATE TABLE preguntas_escala_depresion (
     situacion_actual VARCHAR(10),
     percepcion VARCHAR(10),
     total_todo VARCHAR(20),
-    numero_identificacion VARCHAR(15),
+    id_escala_depresion INT,
+    foreign key (id_escala_depresion) references escala_depresion(id_escala_depresion)
 );
 
 CREATE TABLE datos_funcionario (
@@ -596,12 +604,18 @@ CREATE TABLE datos_funcionario (
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
+    id_escala_depresion INT,
+    foreign key (id_escala_depresion) references escala_depresion(id_escala_depresion)
 );
+
+
+
+
+
 
 CREATE TABLE instrumento_programa (
     id_instrumento_programa INT PRIMARY KEY,
-    fecha_digilenciamiento DATE,
-    numero_identificacion VARCHAR(15)
+    fecha_digilenciamiento DATE
 );
 
 CREATE TABLE instrumento_datos_adulto_mayor (
@@ -628,6 +642,8 @@ CREATE TABLE instrumento_datos_adulto_mayor (
     eps VARCHAR(5),
     cual_eps VARCHAR(40),
     otro_servicio VARCHAR(10),
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
 
 CREATE TABLE instrumento_datos_ambiente_servicios_vivienda (
@@ -645,15 +661,33 @@ CREATE TABLE instrumento_datos_ambiente_servicios_vivienda (
     pisos VARCHAR (10),
     vias_acceso VARCHAR (10),
     transporte VARCHAR (10),
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
+);
+
+
+CREATE TABLE servicios_vivienda(
+    id_servicios_vivienda INT PRIMARY KEY,
     agua BIT,
     luz BIT,
     telefono BIT,
     gas BIT,
     alcantarillado BIT,
-    material_vivienda VARCHAR (40) numero_identificacion VARCHAR(15),
+    material_vivienda VARCHAR (40),
+    id_instrumento_datos_ambiente_servicios_vivienda INT,
+    foreign key (id_instrumento_datos_ambiente_servicios_vivienda) references instrumento_datos_ambiente_servicios_vivienda(id_instrumento_datos_ambiente_servicios_vivienda)
 );
 
-CREATE TABLE instrumento_estado_salud_patologias (
+
+
+
+CREATE TABLE aspecto_biologico(
+    id_aspecto_biologico INT PRIMARY KEY,
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
+);
+
+CREATE TABLE instrumento_patologias (
     id_instrumento_estado_salud_patologias INT PRIMARY KEY,
     hipertension BIT,
     diabetes BIT,
@@ -664,22 +698,31 @@ CREATE TABLE instrumento_estado_salud_patologias (
     cancer BIT,
     demencia BIT,
     otras VARCHAR(20),
-    numero_identificacion VARCHAR(15),
-    dolor_articulaciones VARCHAR(15),
-    mareos_vahidos VARCHAR(15),
-    tos_catarro_gripe VARCHAR(15),
-    tobillos_inflamados VARCHAR(15),
-    cansancio VARCHAR(15),
-    dificultad_para_dormir VARCHAR(15),
-    flojedad_piernas VARCHAR(15),
-    dificultad_respirar VARCHAR(15),
-    palpitaciones VARCHAR(15),
-    dolor_pecho VARCHAR(15),
-    manos_pies_frios VARCHAR(15),
-    adormilado VARCHAR(15),
-    boca_seca VARCHAR(15),
-    hormigueo_manos_pies VARCHAR(15)
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
+
+CREATE TABLE instrumento_síntomas (
+    id_instrumento_síntomas INT PRIMARY KEY,
+    numero_identificacion BIT,
+    dolor_articulaciones BIT,
+    mareos_vahidos BIT,
+    tos_catarro_gripe BIT,
+    tobillos_inflamados BIT,
+    cansancio BIT,
+    dificultad_para_dormir BIT,
+    flojedad_piernas BIT,
+    dificultad_respirar BIT,
+    palpitaciones BIT,
+    dolor_pecho BIT,
+    manos_pies_frios BIT,
+    adormilado BIT,
+    boca_seca BIT,
+    hormigueo_manos_pies BIT,
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
+);
+
 
 CREATE TABLE instrumento_consumo_medicamentos (
     id_instrumento_consumo_medicamentos INT PRIMARY KEY,
@@ -692,7 +735,8 @@ CREATE TABLE instrumento_consumo_medicamentos (
     otros_datos VARCHAR(20),
     medicamentos_no_prescritos BIT,
     cuales_no_prescritos VARCHAR(60),
-    numero_identificacion VARCHAR(15),
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
 
 CREATE TABLE instrumento_habitos_adulto_mayor (
@@ -703,14 +747,14 @@ CREATE TABLE instrumento_habitos_adulto_mayor (
     come_pocas_frutas BIT,
     come_solo BIT,
     realiza_ejercicio BIT,
-,
     frecuencia_realiza_ejercicio VARCHAR(15),
     fuma BIT,
     cuantos_cigarrillos VARCHAR(15),
     consume_licor BIT,
     frecuencia_consume_licor VARCHAR(15),
     cantidad_consume_licor VARCHAR(15),
-    numero_identificacion VARCHAR(15),
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
 
 CREATE TABLE instrumento_funcionalidad_adulto_mayor (
@@ -720,7 +764,8 @@ CREATE TABLE instrumento_funcionalidad_adulto_mayor (
     caminar VARCHAR(10),
     realizar_tareas_fuera VARCHAR(10),
     puede_valerse VARCHAR(10),
-    numero_identificacion VARCHAR(15),
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
 
 CREATE TABLE instrumento_longevidad_adulto_mayor (
@@ -729,7 +774,8 @@ CREATE TABLE instrumento_longevidad_adulto_mayor (
     edad_madre_padre INT,
     edad_abuelo_abuela INT,
     edad_tio_tia INT,
-    numero_identificacion VARCHAR(15),
+    id_aspecto_biologico INT,
+    foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
 
 CREATE TABLE ficha_psicologia_adulto_mayor (
@@ -745,11 +791,19 @@ CREATE TABLE ficha_psicologia_adulto_mayor (
     satisfecho_como_ocupa_eltiempo VARCHAR (15),
     esta_satisfecho_con_la_vida VARCHAR(10),
     observaciones TEXT,
-    numero_identificacion VARCHAR(15),
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
 
-CREATE TABLE instrumento_aspecto_social_adulto_mayor (
-    id_instrumento_aspecto_social_adulto_mayor INT PRIMARY KEY,
+
+CREATE TABLE aspecto_social(
+    id_aspecto_social INT PRIMARY KEY,
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
+);
+
+CREATE TABLE relaciones_familiares (
+    id_relaciones_familiares INT PRIMARY KEY,
     personas_viven INT,
     con_quien_vive VARCHAR(60),
     tuvo_hijos BIT,
@@ -768,6 +822,12 @@ CREATE TABLE instrumento_aspecto_social_adulto_mayor (
     por_que_comunica VARCHAR(40),
     como_califica_relaciones VARCHAR(15),
     por_que_relaciona VARCHAR(40),
+    id_aspecto_social INT,
+    foreign key (id_aspecto_social) references aspecto_social(id_aspecto_social)
+);
+
+CREATE TABLE relaciones_interpersonales (
+    id_relaciones_interpersonales INT PRIMARY KEY,
     hijos_que_no_viven_con_usted VARCHAR (30),
     nietos_que_no_viven_con_usted VARCHAR (30),
     familiares_no_viven_con_usted VARCHAR (30),
@@ -779,11 +839,18 @@ CREATE TABLE instrumento_aspecto_social_adulto_mayor (
     otros_familiares VARCHAR (20),
     vecinos VARCHAR (20),
     amigos_no_vecinos VARCHAR (20),
+    id_aspecto_social INT,
+    foreign key (id_aspecto_social) references aspecto_social(id_aspecto_social)
+);
+
+CREATE TABLE relaciones_social(
+    id_relaciones_social INT PRIMARY KEY,
     participa_en_grupos BIT,
     cuales_grupos VARCHAR(40),
     con_que_frecuencia VARCHAR(15),
     nunca_explique_razones TEXT,
-    numero_identificacion VARCHAR(15),
+    id_aspecto_social INT,
+    foreign key (id_aspecto_social) references aspecto_social(id_aspecto_social)
 );
 
 CREATE TABLE instrumento_actividad_ocio_adulto_mayor (
@@ -806,7 +873,8 @@ CREATE TABLE instrumento_actividad_ocio_adulto_mayor (
     impresion_diagnostica TEXT,
     concepto_gerontologico TEXT,
     plan TEXT,
-    numero_identificacion VARCHAR(15),
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
 
 CREATE TABLE datos_funcionario (
@@ -815,43 +883,78 @@ CREATE TABLE datos_funcionario (
     numero_identificacion_funcionario VARCHAR(15),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
+    id_instrumento_programa INT,
+    foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
+
+
+
+
+
+
+
 
 CREATE TABLE visitas_programa (
     id_visitas_programa INT PRIMARY KEY,
     fecha_visita DATE,
     solicitante VARCHAR(60),
     datos_visita VARCHAR(60),
-    numero_identificacion VARCHAR(15),
-);
-
-CREATE TABLE visitas_domiciliarias_informe (
-    id_visitas_domiciliarias_informe INT PRIMARY KEY,
-    fecha_visita DATE,
-    solicitante VARCHAR(20),
-    datos_visita VARCHAR(20),
-    numero_identificacion VARCHAR(15),
 );
 
 CREATE TABLE visitas_datos_adulto_mayor (
     id_visitas_datos_adulto_mayor INT PRIMARY KEY,
     nombre_completo VARCHAR(120),
     edad INT,
-    numero_identificacion VARCHAR(15),
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
 
-CREATE TABLE visitas_datos_atiende_visita (
-    id_visitas_datos_atiende_visita INT PRIMARY KEY,
+CREATE TABLE datos_atiende_visita (
+    id_datos_atiende_visita INT PRIMARY KEY,
     nombres_atiende_visita VARCHAR(20),
     tipo_numero_documento VARCHAR(20),
     fecha_nacimiento DATE,
     edad INT,
     direccion_residencial VARCHAR(60),
     telefono VARCHAR(15),
-    objetivo TEXT,
-    desarrollo TEXT,
-    numero_identificacion VARCHAR(15),
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
+
+CREATE TABLE visita_objetivo (
+    id_visita_objetivo  INT PRIMARY KEY,
+    objetivo TEXT,
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
+
+);
+
+CREATE TABLE composion_familiar (
+    id_composion_familiar INT PRIMARY KEY,
+    nombres_apellidos VARCHAR(120),
+    parentesco VARCHAR(30),
+    edad INT,
+    escolaridad VARCHAR (50),
+    estado_civil VARCHAR (30),
+    actividad VARCHAR (100),
+    ocupacion VARCHAR (100),
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
+);
+
+CREATE TABLE visita_desarrollo (
+    id_visita_desarrollo INT PRIMARY KEY,
+    desarrollo TEXT,
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
+);
+
+
+
+
+
+
+
 
 CREATE TABLE visitas_aspectos_economicos (
     id_visitas_aspectos_economicos INT PRIMARY KEY,
