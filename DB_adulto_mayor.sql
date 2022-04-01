@@ -982,16 +982,15 @@ CREATE TABLE visitas_concepto(
     foreign key (id_condiciones_habitacionales_economicos) references condiciones_habitacionales_economicos(id_condiciones_habitacionales_economicos)
 );
 
-
 CREATE TABLE informe_valoracion(
-    id_informe_valoracion  PRIMARY KEY,
+    id_informe_valoracion PRIMARY KEY,
     id_visitas_programa INT,
     foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
 
 CREATE TABLE datos_persona_realizo_evaluacion (
     id_datos_persona_realizo_evaluacion INT PRIMARY KEY,
-    nombre VARCHAR(20),  
+    nombre VARCHAR(20),
     numero_identificacion VARCHAR(15),
     residencia VARCHAR(30),
     edad INT,
