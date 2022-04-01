@@ -555,14 +555,6 @@ CREATE TABLE datos_funcionario (
     foreign key (id_escala_mental) references escala_mental(id_escala_mental)
 );
 
-
-
-
-
-
-
- 
-
 CREATE TABLE escala_depresion (
     id_escala_depresion INT PRIMARY KEY,
     nombre_usuario VARCHAR (120),
@@ -607,11 +599,6 @@ CREATE TABLE datos_funcionario (
     id_escala_depresion INT,
     foreign key (id_escala_depresion) references escala_depresion(id_escala_depresion)
 );
-
-
-
-
-
 
 CREATE TABLE instrumento_programa (
     id_instrumento_programa INT PRIMARY KEY,
@@ -665,7 +652,6 @@ CREATE TABLE instrumento_datos_ambiente_servicios_vivienda (
     foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
 
-
 CREATE TABLE servicios_vivienda(
     id_servicios_vivienda INT PRIMARY KEY,
     agua BIT,
@@ -677,9 +663,6 @@ CREATE TABLE servicios_vivienda(
     id_instrumento_datos_ambiente_servicios_vivienda INT,
     foreign key (id_instrumento_datos_ambiente_servicios_vivienda) references instrumento_datos_ambiente_servicios_vivienda(id_instrumento_datos_ambiente_servicios_vivienda)
 );
-
-
-
 
 CREATE TABLE aspecto_biologico(
     id_aspecto_biologico INT PRIMARY KEY,
@@ -722,7 +705,6 @@ CREATE TABLE instrumento_síntomas (
     id_aspecto_biologico INT,
     foreign key (id_aspecto_biologico) references aspecto_biologico(id_aspecto_biologico)
 );
-
 
 CREATE TABLE instrumento_consumo_medicamentos (
     id_instrumento_consumo_medicamentos INT PRIMARY KEY,
@@ -794,7 +776,6 @@ CREATE TABLE ficha_psicologia_adulto_mayor (
     id_instrumento_programa INT,
     foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
-
 
 CREATE TABLE aspecto_social(
     id_aspecto_social INT PRIMARY KEY,
@@ -887,13 +868,6 @@ CREATE TABLE datos_funcionario (
     foreign key (id_instrumento_programa) references instrumento_programa(id_instrumento_programa)
 );
 
-
-
-
-
-
-
-
 CREATE TABLE visitas_programa (
     id_visitas_programa INT PRIMARY KEY,
     fecha_visita DATE,
@@ -922,11 +896,10 @@ CREATE TABLE datos_atiende_visita (
 );
 
 CREATE TABLE visita_objetivo (
-    id_visita_objetivo  INT PRIMARY KEY,
+    id_visita_objetivo INT PRIMARY KEY,
     objetivo TEXT,
     id_visitas_programa INT,
     foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
-
 );
 
 CREATE TABLE composion_familiar (
@@ -949,43 +922,82 @@ CREATE TABLE visita_desarrollo (
     foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
 
+CREATE TABLE condiciones_habitacionales_economicos(
+    id_condiciones_habitacionales_economicos INT PRIMARY KEY,
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
+);
 
-
-
-
-
-
-
-CREATE TABLE visitas_aspectos_economicos (
-    id_visitas_aspectos_economicos INT PRIMARY KEY,
+CREATE TABLE visitas_vivenda(
+    id_visitas_vivenda INT PRIMARY KEY,
     tipo_vivienda VARCHAR(15),
     tenencia_vivienda BIT,
     estrato INT,
     ubicacion VARCHAR(10),
     tiempo_permanencia_vivienda VARCHAR(20),
+    id_condiciones_habitacionales_economicos INT,
+    foreign key (id_condiciones_habitacionales_economicos) references condiciones_habitacionales_economicos(id_condiciones_habitacionales_economicos)
+);
+
+CREATE TABLE vistas_servicios_vivienda(
+    id_vistas_servicios_vivienda INT PRIMARY KEY,
     acueducto BIT,
     energia BIT,
     manejo_basuras BIT,
     gas_domiciliario BIT,
     television BIT,
     internet BIT,
+    id_visitas_vivenda INT,
+    foreign key (id_visitas_vivenda) references visitas_vivenda(id_visitas_vivenda)
+);
+
+CREATE TABLE visitas_distribucion_espacios (
+    id_visitas_distribucion_espacios INT PRIMARY KEY,
     numero_habitaciones INT,
     numero_residentes INT,
     otros_espacios VARCHAR(20),
     descripcion_vivienda TEXT,
+    id_visitas_vivenda INT,
+    foreign key (id_visitas_vivenda) references visitas_vivenda(id_visitas_vivenda)
+);
+
+CREATE TABLE visitas_recursos_economicos(
+    id_visitas_recursos_economicos INT PRIMARY KEY,
     apropiacion_recursos TEXT,
+    id_condiciones_habitacionales_economicos INT,
+    foreign key (id_condiciones_habitacionales_economicos) references condiciones_habitacionales_economicos(id_condiciones_habitacionales_economicos)
+);
+
+CREATE TABLE visitas_observaciones_adicionales(
+    id_visitas_observaciones_adicionales INT PRIMARY KEY,
     observaciones_adicionales TEXT,
+    id_condiciones_habitacionales_economicos INT,
+    foreign key (id_condiciones_habitacionales_economicos) references condiciones_habitacionales_economicos(id_condiciones_habitacionales_economicos)
+);
+
+CREATE TABLE visitas_concepto(
+    id_visitas_concepto INT PRIMARY KEY,
     concepto TEXT,
-    numero_identificacion VARCHAR(15),
+    id_condiciones_habitacionales_economicos INT,
+    foreign key (id_condiciones_habitacionales_economicos) references condiciones_habitacionales_economicos(id_condiciones_habitacionales_economicos)
+);
+
+
+CREATE TABLE informe_valoracion(
+    id_informe_valoracion  PRIMARY KEY,
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
 
 CREATE TABLE datos_persona_realizo_evaluacion (
     id_datos_persona_realizo_evaluacion INT PRIMARY KEY,
-    nombre_encuestado VARCHAR(20),
+    nombre VARCHAR(20),  
     numero_identificacion VARCHAR(15),
-    residencia_encuestado VARCHAR(30),
-    edad_encuestado INT,
-    telefono_encuestado VARCHAR(15),
+    residencia VARCHAR(30),
+    edad INT,
+    telefono VARCHAR(15),
+    id_informe_valoracion INT,
+    foreign key (id_informe_valoracion) references informe_valoracion(id_informe_valoracion)
 );
 
 CREATE TABLE descripcion_actividad (
@@ -993,13 +1005,16 @@ CREATE TABLE descripcion_actividad (
     fecha_inicio_proceso DATE,
     profesional_encargado VARCHAR(60),
     observaciones TEXT,
-    numero_identificacion VARCHAR(15),
+    id_informe_valoracion INT,
+    foreign key (id_informe_valoracion) references informe_valoracion(id_informe_valoracion)
 );
 
-CREATE TABLE ficha_funcionario (
+CREATE TABLE visitas_funcionario (
     id_ficha_funcionario INT PRIMARY KEY,
     nombre_funcionario VARCHAR(80),
     cargo VARCHAR(30),
     registro_profesional VARCHAR(20),
     numero_identificacion VARCHAR(15),
+    id_visitas_programa INT,
+    foreign key (id_visitas_programa) references visitas_datos_adulto_mayor(id_visitas_programa)
 );
